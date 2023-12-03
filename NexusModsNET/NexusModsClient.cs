@@ -60,7 +60,7 @@ namespace NexusModsNET
 			UserAgent = ConstructUserAgent(ProductName, ProductVersion);
 			InitializeHttpClient();
 		}
-		private NexusModsClient(string apiKey) : this(apiKey, Assembly.GetExecutingAssembly().GetName().Name, Assembly.GetExecutingAssembly().GetName().Version.ToString(3)) { }
+		private NexusModsClient(string apiKey, INexusApiLimits rateLimits = null) : this(apiKey, Assembly.GetExecutingAssembly().GetName().Name, Assembly.GetExecutingAssembly().GetName().Version.ToString(3), rateLimits) { }
 		#endregion
 
 		#region Factory Methods
@@ -69,7 +69,7 @@ namespace NexusModsNET
 		/// </summary>
 		/// <param name="apiKey">A key specific to NexusMods.com account, which must be provided to allow usage of the API</param>
 		/// <returns></returns>
-		public static INexusModsClient Create(string apiKey)
+		public static INexusModsClient Create(string apiKey, INexusApiLimits rateLimits = null)
 		{
 			ThrowIfNull(apiKey, nameof(apiKey));
 			return new NexusModsClient(apiKey);
@@ -82,12 +82,12 @@ namespace NexusModsNET
 		/// <param name="productName">A product name to send with each request, this is used to construct a UserAgent string</param>
 		/// <param name="productVersion">A product version to send with each request, this is used to construct a UserAgent string</param>
 		/// <returns></returns>
-		public static INexusModsClient Create(string apiKey, string productName, string productVersion)
+		public static INexusModsClient Create(string apiKey, string productName, string productVersion, INexusApiLimits rateLimits = null)
 		{
 			ThrowIfNull(apiKey, nameof(apiKey));
 			ThrowIfNull(productName, nameof(productName));
 			ThrowIfNull(productVersion, nameof(productVersion));
-			return new NexusModsClient(apiKey, productName, productVersion);
+			return new NexusModsClient(apiKey, productName, productVersion, rateLimits);
 		}
 		#endregion
 
