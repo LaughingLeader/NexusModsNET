@@ -12,7 +12,7 @@ namespace NexusModsNET
 		/// <summary>
 		/// The current reached limits of the API.
 		/// </summary>
-		NexusApiLimits APILimits { get; }
+		INexusApiLimits APILimits { get; }
 		/// <summary>
 		/// Gets or sets the max daily requests before throwing a <see cref="LimitsExceededException"/>
 		/// <br/> The Limit defined by the API is 2500 Daily. Default is 2500.

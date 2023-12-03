@@ -11,7 +11,7 @@ namespace NexusModsNET
 		#region Fields
 		private int _customDailyLimit;
 		private int _customHourlyLimit;
-		NexusApiLimits _apiLimits;
+		INexusApiLimits _apiLimits;
 		#endregion
 
 		#region Events
@@ -29,7 +29,7 @@ namespace NexusModsNET
 		/// <summary>
 		/// <inheritdoc/>
 		/// </summary>
-		public NexusApiLimits APILimits
+		public INexusApiLimits APILimits
 		{
 			get => _apiLimits;
 			internal set
@@ -85,9 +85,9 @@ namespace NexusModsNET
 		/// <summary>
 		/// Instantiate a new instance of the <see cref="RateLimitsManagement"/>
 		/// </summary>
-		public RateLimitsManagement()
+		public RateLimitsManagement(INexusApiLimits rateLimits = null)
 		{
-			APILimits = new NexusApiLimits();
+			APILimits = rateLimits ?? new NexusApiLimits();
 			CustomDailyLimit = 2500;
 			CustomHourlyLimit = 100;
 		}

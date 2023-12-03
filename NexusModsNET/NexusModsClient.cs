@@ -23,7 +23,7 @@ namespace NexusModsNET
 		/// The underlying HttpClient
 		/// </summary>
 		private HttpClient _httpClient;
-		private RateLimitsManagement _rateLimitsManagement;
+		private readonly RateLimitsManagement _rateLimitsManagement;
 		#endregion
 
 		#region Properties
@@ -50,13 +50,13 @@ namespace NexusModsNET
 		#endregion
 
 		#region Constructors
-		private NexusModsClient(string apiKey, string productName, string productVersion)
+		private NexusModsClient(string apiKey, string productName, string productVersion, INexusApiLimits rateLimits = null)
 		{
 			// Initialize properties
 			APIKey = apiKey;
 			ProductName = productName;
 			ProductVersion = productVersion;
-			_rateLimitsManagement = new RateLimitsManagement();
+			_rateLimitsManagement = new RateLimitsManagement(rateLimits);
 			UserAgent = ConstructUserAgent(ProductName, ProductVersion);
 			InitializeHttpClient();
 		}
@@ -206,7 +206,7 @@ namespace NexusModsNET
 			}
 			return value;
 		}
-		private bool TryGetLimits(HttpResponseMessage httpResponse, out NexusApiLimits limits)
+		private bool TryUpdateLimits(HttpResponseMessage httpResponse)
 		{
 			try
 			{
@@ -216,32 +216,23 @@ namespace NexusModsNET
 				int dRemaining = int.Parse(GetHeaderValue(httpResponse, "X-RL-Daily-Remaining"));
 				DateTime hReset = DateTime.Parse(GetHeaderValue(httpResponse, "X-RL-Hourly-Reset"));
 				DateTime dReset = DateTime.Parse(GetHeaderValue(httpResponse, "X-RL-Daily-Reset"));
-				limits = new NexusApiLimits
-				{
-					DailyLimit = dLimit,
-					DailyRemaining = dRemaining,
-					DailyReset = dReset,
-					HourlyLimit = hLimit,
-					HourlyRemaining = hRemaining,
-					HourlyReset = hReset
-				};
+				_rateLimitsManagement.APILimits.DailyLimit = dLimit;
+				_rateLimitsManagement.APILimits.DailyRemaining = dRemaining;
+				_rateLimitsManagement.APILimits.DailyReset = dReset;
+				_rateLimitsManagement.APILimits.HourlyLimit = hLimit;
+				_rateLimitsManagement.APILimits.HourlyRemaining = hRemaining;
+				_rateLimitsManagement.APILimits.HourlyReset = hReset;
 
 				return true;
 			}
 			catch (Exception)
 			{
-				limits = null;
 				return false;
 			}
 		}
 		private void UpdateLimits(HttpResponseMessage httpResponse)
 		{
-			var updatingSuccessful = TryGetLimits(httpResponse, out NexusApiLimits limits);
-
-			if (updatingSuccessful)
-			{
-				_rateLimitsManagement.APILimits = limits;
-			}
+			TryUpdateLimits(httpResponse);
 		}
 		private static void ThrowIfNull(string value, string propertyName)
 		{
