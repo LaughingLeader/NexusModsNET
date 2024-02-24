@@ -1,17 +1,12 @@
-﻿using System.Collections.Generic;
-using System.Net.Http;
-using System.Threading;
-using System.Threading.Tasks;
-
-using NexusModsNET.DataModels;
-using NexusModsNET.DataModels.GraphQL;
+﻿using Newtonsoft.Json;
+using NexusModsNET.DataModels.GraphQL.Query;
 using NexusModsNET.Internals;
 
-using GraphQL.Query.Builder;
-using GraphQL.Query.Builder.Formatter.NewtonsoftJson;
-using NexusModsNET.DataModels.GraphQL.Query;
-using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.Net.Http;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace NexusModsNET.Inquirers
 {
@@ -36,7 +31,7 @@ namespace NexusModsNET.Inquirers
 		/// <param name="revision">The collection revision</param>
 		/// <param name="allowAdultContent">Whether to include mods with adult content</param>
 		/// <returns></returns>
-		public Task<NexusGraphCollectionRevisionQueryResult> GetCollectionRevisionAsync(string gameDomain, string slug, int revision, bool allowAdultContent, CancellationToken cancellationToken = default)
+		public Task<NexusGraphQueryCollectionRevisionResult> GetCollectionRevisionAsync(string gameDomain, string slug, long revision, bool allowAdultContent, CancellationToken cancellationToken = default)
 		{
 			var requestUri = ConstructRequestUri(Routes.V2.GraphQL);
 
@@ -44,7 +39,7 @@ namespace NexusModsNET.Inquirers
 			var payload = JsonConvert.SerializeObject(data);
 			var content = new StringContent(payload, Encoding.UTF8, "application/json");
 
-			return Client.ProcessRequestAsync<NexusGraphCollectionRevisionQueryResult>(requestUri, HttpMethod.Post, cancellationToken, content);
+			return Client.ProcessRequestAsync<NexusGraphQueryCollectionRevisionResult>(requestUri, HttpMethod.Post, cancellationToken, content);
 		}
 	}
 }

@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace NexusModsNET.DataModels.GraphQL
+namespace NexusModsNET.DataModels.GraphQL.Query
 {
-	public class NexusGraphCollectionRevisionQueryResult
+	public class NexusGraphQueryCollectionRevisionResult
 	{
 		[JsonProperty("collectionRevision")]
 		public NexusGraphCollectionRevision CollectionRevision { get; set; }
