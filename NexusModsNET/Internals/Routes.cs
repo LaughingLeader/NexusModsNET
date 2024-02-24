@@ -26,7 +26,17 @@ namespace NexusModsNET.Internals
 		/// Routes specific to retrieve information regarding colour-specific themes for games
 		/// </summary>
 		public static ColourSchemesRoutes ColourSchemes { get; } = new ColourSchemesRoutes();
+		/// <summary>
+		/// V2 specific routes (E.g. getting collection data)
+		/// </summary>
+		public static V2Routes V2 { get; } = new V2Routes();
 	}
+
+	internal class V2Routes
+	{
+		public string GraphQL => "/v2/graphql";
+	}
+
 
 	/// <summary>
 	/// Routes specific to the current user assigned to this API Key
