@@ -1,8 +1,9 @@
-﻿using System.Net;
+﻿using NexusModsNET.DataModels;
+using NexusModsNET.Exceptions;
+
+using System.Net;
 using System.Net.Http;
 using System.Threading;
-using NexusModsNET.DataModels;
-using NexusModsNET.Exceptions;
 
 namespace NexusModsNET.Internals.Handlers
 {

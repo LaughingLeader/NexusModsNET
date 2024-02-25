@@ -1,8 +1,9 @@
-﻿using System;
+﻿using NexusModsNET.Exceptions;
+
+using System;
 using System.Net;
 using System.Net.Http;
 using System.Threading;
-using NexusModsNET.Exceptions;
 
 namespace NexusModsNET.Internals.Handlers
 {

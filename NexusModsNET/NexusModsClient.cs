@@ -1,4 +1,7 @@
-﻿using System;
+﻿using NexusModsNET.Internals;
+using NexusModsNET.Internals.Handlers;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -7,9 +10,6 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
-using NexusModsNET.DataModels;
-using NexusModsNET.Internals;
-using NexusModsNET.Internals.Handlers;
 
 namespace NexusModsNET
 {

@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+
 using NexusModsNET.Internals.Converters;
 
 namespace NexusModsNET.DataModels

@@ -1,16 +1,18 @@
 ﻿using Newtonsoft.Json;
 
+using NexusModsNET.DataModels.GraphQL.Types;
+
 namespace NexusModsNET.DataModels.GraphQL.Query
 {
-	public class NexusGraphQueryCollectionRevisionResult
+	public class NexusGraphQueryCollectionRevisionData
 	{
 		[JsonProperty("collectionRevision")]
 		public NexusGraphCollectionRevision CollectionRevision { get; set; }
+	}
 
-		[JsonProperty("collection")]
-		public NexusGraphCollection Collection { get; set; }
-
-		[JsonProperty("collectionChangelog")]
-		public NexusGraphChangelog CollectionChangelog { get; set; }
+	public class NexusGraphQueryCollectionRevisionResult
+	{
+		[JsonProperty("data")]
+		public NexusGraphQueryCollectionRevisionData Data { get; set; }
 	}
 }

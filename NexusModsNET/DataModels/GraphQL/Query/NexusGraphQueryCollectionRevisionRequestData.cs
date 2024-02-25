@@ -1,5 +1,7 @@
 ﻿using Newtonsoft.Json;
 
+using NexusModsNET.Internals;
+
 namespace NexusModsNET.DataModels.GraphQL.Query
 {
 	public class NexusGraphQueryCollectionRevisionRequestData
@@ -18,6 +20,9 @@ namespace NexusModsNET.DataModels.GraphQL.Query
 
 		[JsonProperty("variables")]
 		public NexusGraphQueryCollectionRevisionRequestVariables Variables { get; set; }
+
+		[JsonProperty("query")]
+		public string Query => Queries.CollectionRevision;
 
 		public NexusGraphQueryCollectionRevisionRequestData(string gameDomain, string slug, long revision, bool allowAdultContent)
 		{

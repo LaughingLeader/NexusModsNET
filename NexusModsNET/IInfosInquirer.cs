@@ -1,5 +1,6 @@
-﻿using System;
-using NexusModsNET.Inquirers;
+﻿using NexusModsNET.Inquirers;
+
+using System;
 
 namespace NexusModsNET
 {

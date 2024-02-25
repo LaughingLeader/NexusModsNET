@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+
 using NexusModsNET.DataModels.GraphQL.Query;
 using NexusModsNET.Internals;
 

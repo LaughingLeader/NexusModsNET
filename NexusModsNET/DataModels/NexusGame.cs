@@ -1,6 +1,8 @@
-﻿using System;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+
 using NexusModsNET.Internals.Converters;
+
+using System;
 
 namespace NexusModsNET.DataModels
 {

@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+
+using NexusModsNET.DataModels;
+
+using System;
 using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
-using Newtonsoft.Json;
-using NexusModsNET.DataModels;
 
 namespace NexusModsNET.Internals
 {

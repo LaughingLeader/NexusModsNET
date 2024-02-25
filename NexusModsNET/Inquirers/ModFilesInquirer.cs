@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using NexusModsNET.DataModels;
+using NexusModsNET.Internals;
+
+using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
-using NexusModsNET.DataModels;
-using NexusModsNET.Internals;
 
 namespace NexusModsNET.Inquirers
 {

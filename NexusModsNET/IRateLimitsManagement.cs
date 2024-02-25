@@ -1,6 +1,6 @@
-﻿using System;
-using NexusModsNET.DataModels;
-using NexusModsNET.Exceptions;
+﻿using NexusModsNET.Exceptions;
+
+using System;
 
 namespace NexusModsNET
 {
