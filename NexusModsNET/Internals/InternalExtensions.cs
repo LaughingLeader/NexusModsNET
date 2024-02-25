@@ -27,6 +27,7 @@ namespace NexusModsNET.Internals
 			using (var jsonReader = new JsonTextReader(reader))
 			{
 				var jsonSerializer = new JsonSerializer();
+				jsonSerializer.NullValueHandling = NullValueHandling.Ignore;
 				return jsonSerializer.Deserialize<T>(jsonReader);
 			}
 		}
