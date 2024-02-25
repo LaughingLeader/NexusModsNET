@@ -32,5 +32,9 @@ namespace NexusModsNET
 		/// Routes specific to the current user assigned to this API Key
 		/// </summary>
 		IUserInquirer User { get; }
+		/// <summary>
+		/// Routes specific to the v2 GraphQL API
+		/// </summary>
+		IGraphInquirer Graph { get; }
 	}
 }

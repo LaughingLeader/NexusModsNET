@@ -13,7 +13,7 @@ namespace NexusModsNET.Inquirers
 	/// <summary>
 	/// Routes specific to retrieve graphql data
 	/// </summary>
-	public class GraphInquirer : InquirerBase
+	public class GraphInquirer : InquirerBase, IGraphInquirer
 	{
 		/// <summary>
 		/// Routes specific to retrieve graphql data

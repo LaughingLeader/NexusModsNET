@@ -26,6 +26,10 @@ namespace NexusModsNET
 		/// </summary>
 		public IModFilesInquirer ModFiles { get; }
 		/// <summary>
+		/// Routes specific to the v2 GraphQL API (E.g. retrieving collection information)
+		/// </summary>
+		public IGraphInquirer Graph { get; }
+		/// <summary>
 		/// Routes specific to retrieve information regarding colour-specific themes for games
 		/// </summary>
 		public IColourSchemesInquirer ColourSchemes { get; }
@@ -42,6 +46,7 @@ namespace NexusModsNET
 			Games = new GamesInquirer(client);
 			Mods = new ModsInquirer(client);
 			ModFiles = new ModFilesInquirer(client);
+			Graph = new GraphInquirer(client);
 			ColourSchemes = new ColourSchemesInquirer(client);
 		}
 	}

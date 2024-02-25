@@ -85,6 +85,19 @@ namespace NexusModsNET
 		/// </summary>
 		/// <param name="withNewClient"><inheritdoc/></param>
 		/// <returns><inheritdoc/></returns>
+		public IGraphInquirer CreateGraphInquirer(bool withNewClient = false)
+		{
+			if (withNewClient)
+			{
+				return new GraphInquirer(CreateNewClient());
+			}
+			return new GraphInquirer(_client);
+		}
+		/// <summary>
+		/// <inheritdoc/>
+		/// </summary>
+		/// <param name="withNewClient"><inheritdoc/></param>
+		/// <returns><inheritdoc/></returns>
 		public IUserInquirer CreateUserInquirer(bool withNewClient = false)
 		{
 			if (withNewClient)
