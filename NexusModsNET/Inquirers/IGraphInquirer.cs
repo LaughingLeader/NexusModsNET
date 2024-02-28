@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -21,5 +22,12 @@ namespace NexusModsNET.Inquirers
 		/// <param name="allowAdultContent">Whether to include mods with adult content</param>
 		/// <returns></returns>
 		Task<NexusGraphQueryCollectionRevisionResult> GetCollectionRevisionAsync(string gameDomain, string slug, long revision, bool allowAdultContent, CancellationToken cancellationToken = default);
+
+		/// <summary>
+		/// Send a payload to the GraphQL API.
+		/// </summary>
+		/// <param name="jsonData">The payload to send to the GraphQL API. Should contain information such as the query, variables, and api key.</param>
+		/// <returns></returns>
+		Task<T> PostAsync<T>(StringContent jsonData, CancellationToken cancellationToken = default);
 	}
 }

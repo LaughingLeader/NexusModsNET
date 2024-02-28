@@ -22,10 +22,11 @@ namespace NexusModsNET.DataModels.GraphQL.Query
 		public NexusGraphQueryCollectionRevisionRequestVariables Variables { get; set; }
 
 		[JsonProperty("query")]
-		public string Query => Queries.CollectionRevision;
+		public string Query { get; }
 
-		public NexusGraphQueryCollectionRevisionRequestData(string gameDomain, string slug, long revision, bool allowAdultContent)
+		public NexusGraphQueryCollectionRevisionRequestData(string gameDomain, string slug, long revision, bool allowAdultContent, string query = null)
 		{
+			Query ??= Queries.CollectionRevision;
 			Variables = new()
 			{
 				Domain = gameDomain,

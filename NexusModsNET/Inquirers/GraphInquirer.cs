@@ -22,10 +22,8 @@ namespace NexusModsNET.Inquirers
 		/// <param name="client">The NexusMods client to use for this endpoint</param>
 		public GraphInquirer(INexusModsClient client) : base(client) { }
 
-		//$slug: String, $adult: Boolean, $domain: String, $revision: Int
-
 		/// <summary>
-		/// Returns an <see cref="IEnumerable{T}"/> of all games, optionally can also return unapproved games
+		/// Query CollectionRevision data for a given game/collection/revision.
 		/// </summary>
 		/// <param name="gameDomain">The game id</param>
 		/// <param name="slug">The collection id</param>
@@ -41,6 +39,17 @@ namespace NexusModsNET.Inquirers
 			var content = new StringContent(payload, Encoding.UTF8, "application/json");
 
 			return Client.ProcessRequestAsync<NexusGraphQueryCollectionRevisionResult>(requestUri, HttpMethod.Post, cancellationToken, content);
+		}
+
+		/// <summary>
+		/// Send a payload to the GraphQL API.
+		/// </summary>
+		/// <param name="jsonData">The payload to send to the GraphQL API. Should contain information such as the query, variables, and api key.</param>
+		/// <returns></returns>
+		public Task<T> PostAsync<T>(StringContent jsonData, CancellationToken cancellationToken = default)
+		{
+			var requestUri = ConstructRequestUri(Routes.V2.GraphQL);
+			return Client.ProcessRequestAsync<T>(requestUri, HttpMethod.Post, cancellationToken, jsonData);
 		}
 	}
 }
