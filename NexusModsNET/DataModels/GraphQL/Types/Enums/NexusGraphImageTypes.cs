@@ -1,18 +1,12 @@
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+using System.Runtime.Serialization;namespace NexusModsNET.DataModels.GraphQL.Types;
 
-using System.Runtime.Serialization;
-
-namespace NexusModsNET.DataModels.GraphQL.Types
+[JsonConverter(typeof(JsonStringEnumConverter))]
+public enum NexusGraphImageTypes
 {
-	[JsonConverter(typeof(StringEnumConverter))]
-	public enum NexusGraphImageTypes
-	{
-		[EnumMember(Value = "gallery")]
-		Gallery,
-		[EnumMember(Value = "tile")]
-		Tile,
-		[EnumMember(Value = "header")]
-		Header,
-	}
+	[EnumMember(Value = "gallery")]
+	Gallery,
+	[EnumMember(Value = "tile")]
+	Tile,
+	[EnumMember(Value = "header")]
+	Header,
 }

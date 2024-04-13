@@ -1,13 +1,10 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphCollectionBugReportEdge
 {
-	public class NexusGraphCollectionBugReportEdge
-	{
-		[JsonProperty("cursor")]
-		public string Cursor { get; set; }
+	[JsonPropertyName("cursor")]
+	public string Cursor { get; set; }
 
-		[JsonProperty("node")]
-		public NexusGraphCollectionBugReport? Node { get; set; }
-	}
+	[JsonPropertyName("node")]
+	public NexusGraphCollectionBugReport? Node { get; set; }
 }

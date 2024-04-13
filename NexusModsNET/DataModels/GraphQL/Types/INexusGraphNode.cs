@@ -1,10 +1,7 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public interface INexusGraphNode
 {
-	public interface INexusGraphNode
-	{
-		[JsonProperty("id")]
-		public string Id { get; set; }
-	}
+	[JsonPropertyName("id")]
+	public string Id { get; set; }
 }

@@ -1,22 +1,19 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphUserMonthlySummaryEntry
 {
-	public class NexusGraphUserMonthlySummaryEntry
-	{
-		[JsonProperty("modCount")]
-		public int ModCount { get; set; }
+	[JsonPropertyName("modCount")]
+	public int ModCount { get; set; }
 
-		[JsonProperty("modValue")]
-		public int ModValue { get; set; }
+	[JsonPropertyName("modValue")]
+	public int ModValue { get; set; }
 
-		[JsonProperty("month")]
-		public int Month { get; set; }
+	[JsonPropertyName("month")]
+	public int Month { get; set; }
 
-		[JsonProperty("value")]
-		public int Value { get; set; }
+	[JsonPropertyName("value")]
+	public int Value { get; set; }
 
-		[JsonProperty("year")]
-		public int Year { get; set; }
-	}
+	[JsonPropertyName("year")]
+	public int Year { get; set; }
 }

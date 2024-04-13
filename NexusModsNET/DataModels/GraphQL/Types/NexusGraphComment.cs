@@ -1,90 +1,85 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-using System;
-
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphComment : INexusGraphAttachable
 {
-	public class NexusGraphComment : INexusGraphAttachable
-	{
-		[JsonProperty("attachments")]
-		public NexusGraphAttachment[] Attachments { get; set; }
+	[JsonPropertyName("attachments")]
+	public NexusGraphAttachment[] Attachments { get; set; }
 
-		[JsonProperty("body")]
-		public string Body { get; set; }
+	[JsonPropertyName("body")]
+	public string Body { get; set; }
 
-		[JsonProperty("createdAt")]
-		public DateTimeOffset CreatedAt { get; set; }
+	[JsonPropertyName("createdAt")]
+	public DateTimeOffset CreatedAt { get; set; }
 
-		[JsonProperty("creator")]
-		public NexusGraphUser Creator { get; set; }
+	[JsonPropertyName("creator")]
+	public NexusGraphUser Creator { get; set; }
 
-		[JsonProperty("cursor")]
-		public string Cursor { get; set; }
+	[JsonPropertyName("cursor")]
+	public string Cursor { get; set; }
 
-		[JsonProperty("discardedAt")]
-		public DateTimeOffset DiscardedAt { get; set; }
+	[JsonPropertyName("discardedAt")]
+	public DateTimeOffset DiscardedAt { get; set; }
 
-		[JsonProperty("discardedBy")]
-		public NexusGraphUser? DiscardedBy { get; set; }
+	[JsonPropertyName("discardedBy")]
+	public NexusGraphUser? DiscardedBy { get; set; }
 
-		[JsonProperty("hiddenAt")]
-		public DateTimeOffset HiddenAt { get; set; }
+	[JsonPropertyName("hiddenAt")]
+	public DateTimeOffset HiddenAt { get; set; }
 
-		[JsonProperty("hiddenBy")]
-		public NexusGraphUser? HiddenBy { get; set; }
+	[JsonPropertyName("hiddenBy")]
+	public NexusGraphUser? HiddenBy { get; set; }
 
-		[JsonProperty("hiddenInternalReason")]
-		public string HiddenInternalReason { get; set; }
+	[JsonPropertyName("hiddenInternalReason")]
+	public string HiddenInternalReason { get; set; }
 
-		[JsonProperty("hiddenReason")]
-		public string HiddenReason { get; set; }
+	[JsonPropertyName("hiddenReason")]
+	public string HiddenReason { get; set; }
 
-		[JsonProperty("id")]
-		public string Id { get; set; }
+	[JsonPropertyName("id")]
+	public string Id { get; set; }
 
-		[JsonProperty("isDiscarded")]
-		public bool IsDiscarded { get; set; }
+	[JsonPropertyName("isDiscarded")]
+	public bool IsDiscarded { get; set; }
 
-		[JsonProperty("isPinned")]
-		public bool IsPinned { get; set; }
+	[JsonPropertyName("isPinned")]
+	public bool IsPinned { get; set; }
 
-		[JsonProperty("likesCount")]
-		public int LikesCount { get; set; }
+	[JsonPropertyName("likesCount")]
+	public int LikesCount { get; set; }
 
-		[JsonProperty("lockedAt")]
-		public DateTimeOffset LockedAt { get; set; }
+	[JsonPropertyName("lockedAt")]
+	public DateTimeOffset LockedAt { get; set; }
 
-		[JsonProperty("lockedBy")]
-		public NexusGraphUser? LockedBy { get; set; }
+	[JsonPropertyName("lockedBy")]
+	public NexusGraphUser? LockedBy { get; set; }
 
-		[JsonProperty("moderatedByAdmin")]
-		public bool ModeratedByAdmin { get; set; }
+	[JsonPropertyName("moderatedByAdmin")]
+	public bool ModeratedByAdmin { get; set; }
 
-		[JsonProperty("moderationStatus")]
-		public NexusGraphCommentModerationStatus ModerationStatus { get; set; }
+	[JsonPropertyName("moderationStatus")]
+	public NexusGraphCommentModerationStatus ModerationStatus { get; set; }
 
-		[JsonProperty("parent")]
-		public NexusGraphComment? Parent { get; set; }
+	[JsonPropertyName("parent")]
+	public NexusGraphComment? Parent { get; set; }
 
-		[JsonProperty("pinPriority")]
-		public int PinPriority { get; set; }
+	[JsonPropertyName("pinPriority")]
+	public int PinPriority { get; set; }
 
-		[JsonProperty("pinnedBy")]
-		public NexusGraphUser? PinnedBy { get; set; }
+	[JsonPropertyName("pinnedBy")]
+	public NexusGraphUser? PinnedBy { get; set; }
 
-		[JsonProperty("pinnedByAdmin")]
-		public bool PinnedByAdmin { get; set; }
+	[JsonPropertyName("pinnedByAdmin")]
+	public bool PinnedByAdmin { get; set; }
 
-		[JsonProperty("replies")]
-		public NexusGraphCommentConnection Replies { get; set; }
+	[JsonPropertyName("replies")]
+	public NexusGraphCommentConnection Replies { get; set; }
 
-		[JsonProperty("revisions")]
-		public NexusGraphCommentRevision[] Revisions { get; set; }
+	[JsonPropertyName("revisions")]
+	public NexusGraphCommentRevision[] Revisions { get; set; }
 
-		[JsonProperty("updatedAt")]
-		public DateTimeOffset UpdatedAt { get; set; }
+	[JsonPropertyName("updatedAt")]
+	public DateTimeOffset UpdatedAt { get; set; }
 
-		[JsonProperty("viewerHasLiked")]
-		public bool ViewerHasLiked { get; set; }
-	}
+	[JsonPropertyName("viewerHasLiked")]
+	public bool ViewerHasLiked { get; set; }
 }

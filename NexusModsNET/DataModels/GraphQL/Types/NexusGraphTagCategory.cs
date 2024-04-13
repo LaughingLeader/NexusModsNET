@@ -1,27 +1,22 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-using System;
-
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphTagCategory
 {
-	public class NexusGraphTagCategory
-	{
-		[JsonProperty("createdAt")]
-		public DateTimeOffset CreatedAt { get; set; }
+	[JsonPropertyName("createdAt")]
+	public DateTimeOffset CreatedAt { get; set; }
 
-		[JsonProperty("discardedAt")]
-		public DateTimeOffset DiscardedAt { get; set; }
+	[JsonPropertyName("discardedAt")]
+	public DateTimeOffset DiscardedAt { get; set; }
 
-		[JsonProperty("id")]
-		public string Id { get; set; }
+	[JsonPropertyName("id")]
+	public string Id { get; set; }
 
-		[JsonProperty("name")]
-		public string Name { get; set; }
+	[JsonPropertyName("name")]
+	public string Name { get; set; }
 
-		[JsonProperty("tags")]
-		public NexusGraphTag[] Tags { get; set; }
+	[JsonPropertyName("tags")]
+	public NexusGraphTag[] Tags { get; set; }
 
-		[JsonProperty("updatedAt")]
-		public DateTimeOffset UpdatedAt { get; set; }
-	}
+	[JsonPropertyName("updatedAt")]
+	public DateTimeOffset UpdatedAt { get; set; }
 }

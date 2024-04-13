@@ -1,16 +1,10 @@
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+using System.Runtime.Serialization;namespace NexusModsNET.DataModels.GraphQL.Types;
 
-using System.Runtime.Serialization;
-
-namespace NexusModsNET.DataModels.GraphQL.Types
+[JsonConverter(typeof(JsonStringEnumConverter))]
+public enum NexusGraphFilterLogicalOperator
 {
-	[JsonConverter(typeof(StringEnumConverter))]
-	public enum NexusGraphFilterLogicalOperator
-	{
-		[EnumMember(Value = "AND")]
-		And,
-		[EnumMember(Value = "OR")]
-		Or,
-	}
+	[EnumMember(Value = "AND")]
+	And,
+	[EnumMember(Value = "OR")]
+	Or,
 }

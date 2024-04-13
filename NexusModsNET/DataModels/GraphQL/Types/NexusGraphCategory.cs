@@ -1,42 +1,37 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-using System;
-
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphCategory
 {
-	public class NexusGraphCategory
-	{
-		[JsonProperty("approved")]
-		public bool Approved { get; set; }
+	[JsonPropertyName("approved")]
+	public bool Approved { get; set; }
 
-		[JsonProperty("approvedBy")]
-		public int ApprovedBy { get; set; }
+	[JsonPropertyName("approvedBy")]
+	public int ApprovedBy { get; set; }
 
-		[JsonProperty("categoryGames")]
-		public NexusGraphGame[] CategoryGames { get; set; }
+	[JsonPropertyName("categoryGames")]
+	public NexusGraphGame[] CategoryGames { get; set; }
 
-		[JsonProperty("createdAt")]
-		public DateTimeOffset CreatedAt { get; set; }
+	[JsonPropertyName("createdAt")]
+	public DateTimeOffset CreatedAt { get; set; }
 
-		[JsonProperty("description")]
-		public string Description { get; set; }
+	[JsonPropertyName("description")]
+	public string Description { get; set; }
 
-		[JsonProperty("discardedAt")]
-		public DateTimeOffset DiscardedAt { get; set; }
+	[JsonPropertyName("discardedAt")]
+	public DateTimeOffset DiscardedAt { get; set; }
 
-		[JsonProperty("id")]
-		public int Id { get; set; }
+	[JsonPropertyName("id")]
+	public int Id { get; set; }
 
-		[JsonProperty("name")]
-		public string Name { get; set; }
+	[JsonPropertyName("name")]
+	public string Name { get; set; }
 
-		[JsonProperty("parentId")]
-		public int ParentId { get; set; }
+	[JsonPropertyName("parentId")]
+	public int ParentId { get; set; }
 
-		[JsonProperty("suggestedBy")]
-		public int SuggestedBy { get; set; }
+	[JsonPropertyName("suggestedBy")]
+	public int SuggestedBy { get; set; }
 
-		[JsonProperty("updatedAt")]
-		public DateTimeOffset UpdatedAt { get; set; }
-	}
+	[JsonPropertyName("updatedAt")]
+	public DateTimeOffset UpdatedAt { get; set; }
 }

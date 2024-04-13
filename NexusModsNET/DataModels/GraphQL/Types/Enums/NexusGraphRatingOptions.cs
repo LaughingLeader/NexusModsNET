@@ -1,18 +1,12 @@
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+using System.Runtime.Serialization;namespace NexusModsNET.DataModels.GraphQL.Types;
 
-using System.Runtime.Serialization;
-
-namespace NexusModsNET.DataModels.GraphQL.Types
+[JsonConverter(typeof(JsonStringEnumConverter))]
+public enum NexusGraphRatingOptions
 {
-	[JsonConverter(typeof(StringEnumConverter))]
-	public enum NexusGraphRatingOptions
-	{
-		[EnumMember(Value = "positive")]
-		Positive,
-		[EnumMember(Value = "negative")]
-		Negative,
-		[EnumMember(Value = "abstained")]
-		Abstained,
-	}
+	[EnumMember(Value = "positive")]
+	Positive,
+	[EnumMember(Value = "negative")]
+	Negative,
+	[EnumMember(Value = "abstained")]
+	Abstained,
 }

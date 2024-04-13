@@ -1,16 +1,13 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphAttachment : INexusGraphNode
 {
-	public class NexusGraphAttachment : INexusGraphNode
-	{
-		[JsonProperty("filename")]
-		public string Filename { get; set; }
+	[JsonPropertyName("filename")]
+	public string Filename { get; set; }
 
-		[JsonProperty("id")]
-		public string Id { get; set; }
+	[JsonPropertyName("id")]
+	public string Id { get; set; }
 
-		[JsonProperty("url")]
-		public string Url { get; set; }
-	}
+	[JsonPropertyName("url")]
+	public string Url { get; set; }
 }

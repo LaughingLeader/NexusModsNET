@@ -1,13 +1,10 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphModEdge
 {
-	public class NexusGraphModEdge
-	{
-		[JsonProperty("cursor")]
-		public string Cursor { get; set; }
+	[JsonPropertyName("cursor")]
+	public string Cursor { get; set; }
 
-		[JsonProperty("node")]
-		public NexusGraphMod? Node { get; set; }
-	}
+	[JsonPropertyName("node")]
+	public NexusGraphMod? Node { get; set; }
 }

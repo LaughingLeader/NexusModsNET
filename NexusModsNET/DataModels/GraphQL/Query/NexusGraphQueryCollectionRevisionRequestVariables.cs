@@ -1,19 +1,16 @@
-﻿using Newtonsoft.Json;
+﻿namespace NexusModsNET.DataModels.GraphQL.Query;
 
-namespace NexusModsNET.DataModels.GraphQL.Query
+public class NexusGraphQueryCollectionRevisionRequestVariables
 {
-	public class NexusGraphQueryCollectionRevisionRequestVariables
-	{
-		[JsonProperty("domain")]
-		public string Domain { get; set; }
+	[JsonPropertyName("domain")]
+	public string Domain { get; set; }
 
-		[JsonProperty("slug")]
-		public string Slug { get; set; }
+	[JsonPropertyName("slug")]
+	public string Slug { get; set; }
 
-		[JsonProperty("revision")]
-		public long Revision { get; set; }
+	[JsonPropertyName("revision")]
+	public long Revision { get; set; }
 
-		[JsonProperty("viewAdultContent")]
-		public bool ViewAdultContent { get; set; }
-	}
+	[JsonPropertyName("viewAdultContent")]
+	public bool ViewAdultContent { get; set; }
 }

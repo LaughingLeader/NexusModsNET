@@ -1,20 +1,14 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+﻿namespace NexusModsNET.DataModels;
 
-using System;
-
-namespace NexusModsNET.DataModels
+public class NexusModEndorsement
 {
-	public class NexusModEndorsement
-	{
-		[JsonProperty("endorse_status")]
-		public string EndorseStatus { get; set; }
+	[JsonPropertyName("endorse_status")]
+	public string EndorseStatus { get; set; }
 
-		[JsonProperty("timestamp")]
-		[JsonConverter(typeof(UnixDateTimeConverter))]
-		public DateTimeOffset? DateTime { get; set; }
+	[JsonPropertyName("timestamp")]
+	[JsonConverter(typeof(UnixToNullableDateTimeConverter))]
+	public DateTimeOffset? DateTime { get; set; }
 
-		[JsonProperty("version")]
-		public string Version { get; set; }
-	}
+	[JsonPropertyName("version")]
+	public string Version { get; set; }
 }

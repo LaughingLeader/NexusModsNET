@@ -1,16 +1,13 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphPaymentEntity
 {
-	public class NexusGraphPaymentEntity
-	{
-		[JsonProperty("id")]
-		public int Id { get; set; }
+	[JsonPropertyName("id")]
+	public int Id { get; set; }
 
-		[JsonProperty("label")]
-		public string Label { get; set; }
+	[JsonPropertyName("label")]
+	public string Label { get; set; }
 
-		[JsonProperty("type")]
-		public string Type { get; set; }
-	}
+	[JsonPropertyName("type")]
+	public string Type { get; set; }
 }

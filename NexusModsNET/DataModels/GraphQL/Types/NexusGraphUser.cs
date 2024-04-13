@@ -1,81 +1,76 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-using System;
-
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphUser
 {
-	public class NexusGraphUser
-	{
-		[JsonProperty("about")]
-		public string About { get; set; }
+	[JsonPropertyName("about")]
+	public string About { get; set; }
 
-		[JsonProperty("avatar")]
-		public string Avatar { get; set; }
+	[JsonPropertyName("avatar")]
+	public string Avatar { get; set; }
 
-		[JsonProperty("banned")]
-		public bool Banned { get; set; }
+	[JsonPropertyName("banned")]
+	public bool Banned { get; set; }
 
-		[JsonProperty("country")]
-		public string Country { get; set; }
+	[JsonPropertyName("country")]
+	public string Country { get; set; }
 
-		[JsonProperty("deleted")]
-		public bool Deleted { get; set; }
+	[JsonPropertyName("deleted")]
+	public bool Deleted { get; set; }
 
-		[JsonProperty("donationsEnabled")]
-		public bool DonationsEnabled { get; set; }
+	[JsonPropertyName("donationsEnabled")]
+	public bool DonationsEnabled { get; set; }
 
-		[JsonProperty("dpOptedIn")]
-		public bool DpOptedIn { get; set; }
+	[JsonPropertyName("dpOptedIn")]
+	public bool DpOptedIn { get; set; }
 
-		[JsonProperty("email")]
-		public string Email { get; set; }
+	[JsonPropertyName("email")]
+	public string Email { get; set; }
 
-		[JsonProperty("endorsementsGiven")]
-		public int EndorsementsGiven { get; set; }
+	[JsonPropertyName("endorsementsGiven")]
+	public int EndorsementsGiven { get; set; }
 
-		[JsonProperty("hasGivenKudos")]
-		public bool HasGivenKudos { get; set; }
+	[JsonPropertyName("hasGivenKudos")]
+	public bool HasGivenKudos { get; set; }
 
-		[JsonProperty("ipAddress")]
-		public string IpAddress { get; set; }
+	[JsonPropertyName("ipAddress")]
+	public string IpAddress { get; set; }
 
-		[JsonProperty("isBlocked")]
-		public bool IsBlocked { get; set; }
+	[JsonPropertyName("isBlocked")]
+	public bool IsBlocked { get; set; }
 
-		[JsonProperty("isTracked")]
-		public bool IsTracked { get; set; }
+	[JsonPropertyName("isTracked")]
+	public bool IsTracked { get; set; }
 
-		[JsonProperty("joined")]
-		public DateTimeOffset Joined { get; set; }
+	[JsonPropertyName("joined")]
+	public DateTimeOffset Joined { get; set; }
 
-		[JsonProperty("kudos")]
-		public int Kudos { get; set; }
+	[JsonPropertyName("kudos")]
+	public int Kudos { get; set; }
 
-		[JsonProperty("lastActive")]
-		public DateTimeOffset LastActive { get; set; }
+	[JsonPropertyName("lastActive")]
+	public DateTimeOffset LastActive { get; set; }
 
-		[JsonProperty("memberId")]
-		public int MemberId { get; set; }
+	[JsonPropertyName("memberId")]
+	public int MemberId { get; set; }
 
-		[JsonProperty("membershipRoles")]
-		public string[] MembershipRoles { get; set; }
+	[JsonPropertyName("membershipRoles")]
+	public string[] MembershipRoles { get; set; }
 
-		[JsonProperty("name")]
-		public string Name { get; set; }
+	[JsonPropertyName("name")]
+	public string Name { get; set; }
 
-		[JsonProperty("paypal")]
-		public string Paypal { get; set; }
+	[JsonPropertyName("paypal")]
+	public string Paypal { get; set; }
 
-		[JsonProperty("posts")]
-		public int Posts { get; set; }
+	[JsonPropertyName("posts")]
+	public int Posts { get; set; }
 
-		[JsonProperty("recognizedAuthor")]
-		public bool RecognizedAuthor { get; set; }
+	[JsonPropertyName("recognizedAuthor")]
+	public bool RecognizedAuthor { get; set; }
 
-		[JsonProperty("uniqueModDownloads")]
-		public int UniqueModDownloads { get; set; }
+	[JsonPropertyName("uniqueModDownloads")]
+	public int UniqueModDownloads { get; set; }
 
-		[JsonProperty("views")]
-		public int Views { get; set; }
-	}
+	[JsonPropertyName("views")]
+	public int Views { get; set; }
 }

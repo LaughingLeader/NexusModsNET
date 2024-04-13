@@ -1,10 +1,7 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphAddVideoToCollectionMutationPayload
 {
-	public class NexusGraphAddVideoToCollectionMutationPayload
-	{
-		[JsonProperty("video")]
-		public NexusGraphCollectionVideo Video { get; set; }
-	}
+	[JsonPropertyName("video")]
+	public NexusGraphCollectionVideo Video { get; set; }
 }

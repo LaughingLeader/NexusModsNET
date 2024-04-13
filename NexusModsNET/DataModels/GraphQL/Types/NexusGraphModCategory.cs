@@ -1,19 +1,16 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphModCategory
 {
-	public class NexusGraphModCategory
-	{
-		[JsonProperty("date")]
-		public int Date { get; set; }
+	[JsonPropertyName("date")]
+	public int Date { get; set; }
 
-		[JsonProperty("gameId")]
-		public int GameId { get; set; }
+	[JsonPropertyName("gameId")]
+	public int GameId { get; set; }
 
-		[JsonProperty("id")]
-		public string Id { get; set; }
+	[JsonPropertyName("id")]
+	public string Id { get; set; }
 
-		[JsonProperty("name")]
-		public string Name { get; set; }
-	}
+	[JsonPropertyName("name")]
+	public string Name { get; set; }
 }

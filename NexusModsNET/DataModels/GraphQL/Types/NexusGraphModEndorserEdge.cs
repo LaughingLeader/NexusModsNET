@@ -1,18 +1,13 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-using System;
-
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphModEndorserEdge
 {
-	public class NexusGraphModEndorserEdge
-	{
-		[JsonProperty("cursor")]
-		public string Cursor { get; set; }
+	[JsonPropertyName("cursor")]
+	public string Cursor { get; set; }
 
-		[JsonProperty("endorsedAt")]
-		public DateTimeOffset EndorsedAt { get; set; }
+	[JsonPropertyName("endorsedAt")]
+	public DateTimeOffset EndorsedAt { get; set; }
 
-		[JsonProperty("node")]
-		public NexusGraphUser? Node { get; set; }
-	}
+	[JsonPropertyName("node")]
+	public NexusGraphUser? Node { get; set; }
 }

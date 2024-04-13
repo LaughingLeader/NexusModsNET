@@ -1,28 +1,25 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphTransaction
 {
-	public class NexusGraphTransaction
-	{
-		[JsonProperty("amount")]
-		public int Amount { get; set; }
+	[JsonPropertyName("amount")]
+	public int Amount { get; set; }
 
-		[JsonProperty("createdAt")]
-		public string CreatedAt { get; set; }
+	[JsonPropertyName("createdAt")]
+	public string CreatedAt { get; set; }
 
-		[JsonProperty("creditorEntity")]
-		public NexusGraphPaymentEntity? CreditorEntity { get; set; }
+	[JsonPropertyName("creditorEntity")]
+	public NexusGraphPaymentEntity? CreditorEntity { get; set; }
 
-		[JsonProperty("debitorEntity")]
-		public NexusGraphPaymentEntity? DebitorEntity { get; set; }
+	[JsonPropertyName("debitorEntity")]
+	public NexusGraphPaymentEntity? DebitorEntity { get; set; }
 
-		[JsonProperty("id")]
-		public int Id { get; set; }
+	[JsonPropertyName("id")]
+	public int Id { get; set; }
 
-		[JsonProperty("label")]
-		public string Label { get; set; }
+	[JsonPropertyName("label")]
+	public string Label { get; set; }
 
-		[JsonProperty("type")]
-		public string Type { get; set; }
-	}
+	[JsonPropertyName("type")]
+	public string Type { get; set; }
 }

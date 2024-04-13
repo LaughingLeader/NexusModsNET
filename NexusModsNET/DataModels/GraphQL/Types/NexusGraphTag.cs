@@ -1,39 +1,34 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-using System;
-
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphTag
 {
-	public class NexusGraphTag
-	{
-		[JsonProperty("adult")]
-		public bool Adult { get; set; }
+	[JsonPropertyName("adult")]
+	public bool Adult { get; set; }
 
-		[JsonProperty("category")]
-		public NexusGraphTagCategory? Category { get; set; }
+	[JsonPropertyName("category")]
+	public NexusGraphTagCategory? Category { get; set; }
 
-		[JsonProperty("createdAt")]
-		public DateTimeOffset CreatedAt { get; set; }
+	[JsonPropertyName("createdAt")]
+	public DateTimeOffset CreatedAt { get; set; }
 
-		[JsonProperty("discardedAt")]
-		public DateTimeOffset DiscardedAt { get; set; }
+	[JsonPropertyName("discardedAt")]
+	public DateTimeOffset DiscardedAt { get; set; }
 
-		[JsonProperty("games")]
-		public NexusGraphGame[] Games { get; set; }
+	[JsonPropertyName("games")]
+	public NexusGraphGame[] Games { get; set; }
 
-		[JsonProperty("global")]
-		public bool Global { get; set; }
+	[JsonPropertyName("global")]
+	public bool Global { get; set; }
 
-		[JsonProperty("id")]
-		public string Id { get; set; }
+	[JsonPropertyName("id")]
+	public string Id { get; set; }
 
-		[JsonProperty("name")]
-		public string Name { get; set; }
+	[JsonPropertyName("name")]
+	public string Name { get; set; }
 
-		[JsonProperty("taggablesCount")]
-		public int TaggablesCount { get; set; }
+	[JsonPropertyName("taggablesCount")]
+	public int TaggablesCount { get; set; }
 
-		[JsonProperty("updatedAt")]
-		public DateTimeOffset UpdatedAt { get; set; }
-	}
+	[JsonPropertyName("updatedAt")]
+	public DateTimeOffset UpdatedAt { get; set; }
 }

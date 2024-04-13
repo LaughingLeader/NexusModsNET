@@ -1,40 +1,37 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphActionLog
 {
-	public class NexusGraphActionLog
-	{
-		[JsonProperty("actionId")]
-		public int ActionId { get; set; }
+	[JsonPropertyName("actionId")]
+	public int ActionId { get; set; }
 
-		[JsonProperty("date")]
-		public int Date { get; set; }
+	[JsonPropertyName("date")]
+	public int Date { get; set; }
 
-		[JsonProperty("description")]
-		public string Description { get; set; }
+	[JsonPropertyName("description")]
+	public string Description { get; set; }
 
-		[JsonProperty("gameId")]
-		public int GameId { get; set; }
+	[JsonPropertyName("gameId")]
+	public int GameId { get; set; }
 
-		[JsonProperty("id")]
-		public int Id { get; set; }
+	[JsonPropertyName("id")]
+	public int Id { get; set; }
 
-		[JsonProperty("ip")]
-		public string Ip { get; set; }
+	[JsonPropertyName("ip")]
+	public string Ip { get; set; }
 
-		[JsonProperty("objectId")]
-		public int ObjectId { get; set; }
+	[JsonPropertyName("objectId")]
+	public int ObjectId { get; set; }
 
-		[JsonProperty("objectType")]
-		public int ObjectType { get; set; }
+	[JsonPropertyName("objectType")]
+	public int ObjectType { get; set; }
 
-		[JsonProperty("relatedId")]
-		public int RelatedId { get; set; }
+	[JsonPropertyName("relatedId")]
+	public int RelatedId { get; set; }
 
-		[JsonProperty("relatedType")]
-		public int RelatedType { get; set; }
+	[JsonPropertyName("relatedType")]
+	public int RelatedType { get; set; }
 
-		[JsonProperty("userId")]
-		public int UserId { get; set; }
-	}
+	[JsonPropertyName("userId")]
+	public int UserId { get; set; }
 }

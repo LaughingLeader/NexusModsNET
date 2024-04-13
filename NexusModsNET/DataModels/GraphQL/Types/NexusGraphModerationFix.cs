@@ -1,33 +1,28 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-using System;
-
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphModerationFix
 {
-	public class NexusGraphModerationFix
-	{
-		[JsonProperty("author")]
-		public NexusGraphUser Author { get; set; }
+	[JsonPropertyName("author")]
+	public NexusGraphUser Author { get; set; }
 
-		[JsonProperty("authorId")]
-		public string AuthorId { get; set; }
+	[JsonPropertyName("authorId")]
+	public string AuthorId { get; set; }
 
-		[JsonProperty("createdAt")]
-		public DateTimeOffset CreatedAt { get; set; }
+	[JsonPropertyName("createdAt")]
+	public DateTimeOffset CreatedAt { get; set; }
 
-		[JsonProperty("description")]
-		public string Description { get; set; }
+	[JsonPropertyName("description")]
+	public string Description { get; set; }
 
-		[JsonProperty("id")]
-		public string Id { get; set; }
+	[JsonPropertyName("id")]
+	public string Id { get; set; }
 
-		[JsonProperty("moderation")]
-		public NexusGraphModeration Moderation { get; set; }
+	[JsonPropertyName("moderation")]
+	public NexusGraphModeration Moderation { get; set; }
 
-		[JsonProperty("status")]
-		public NexusGraphModerationFixStatus Status { get; set; }
+	[JsonPropertyName("status")]
+	public NexusGraphModerationFixStatus Status { get; set; }
 
-		[JsonProperty("updatedAt")]
-		public DateTimeOffset UpdatedAt { get; set; }
-	}
+	[JsonPropertyName("updatedAt")]
+	public DateTimeOffset UpdatedAt { get; set; }
 }

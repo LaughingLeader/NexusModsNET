@@ -1,21 +1,15 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+﻿namespace NexusModsNET.DataModels;
 
-using System;
-
-namespace NexusModsNET.DataModels
+public class NexusModUpdate
 {
-	public class NexusModUpdate
-	{
-		[JsonProperty("mod_id")]
-		public long ModId { get; set; }
+	[JsonPropertyName("mod_id")]
+	public long ModId { get; set; }
 
-		[JsonProperty("latest_file_update")]
-		[JsonConverter(typeof(UnixDateTimeConverter))]
-		public DateTimeOffset LatestFileUpdate { get; set; }
+	[JsonPropertyName("latest_file_update")]
+	[JsonConverter(typeof(UnixToNullableDateTimeConverter))]
+	public DateTimeOffset LatestFileUpdate { get; set; }
 
-		[JsonProperty("latest_mod_activity")]
-		[JsonConverter(typeof(UnixDateTimeConverter))]
-		public DateTimeOffset LatestModActivity { get; set; }
-	}
+	[JsonPropertyName("latest_mod_activity")]
+	[JsonConverter(typeof(UnixToNullableDateTimeConverter))]
+	public DateTimeOffset LatestModActivity { get; set; }
 }

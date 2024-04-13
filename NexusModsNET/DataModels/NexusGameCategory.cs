@@ -1,19 +1,14 @@
-﻿using Newtonsoft.Json;
+﻿namespace NexusModsNET.DataModels;
 
-using NexusModsNET.Internals.Converters;
-
-namespace NexusModsNET.DataModels
+public class NexusGameCategory
 {
-	public class NexusGameCategory
-	{
-		[JsonProperty("category_id")]
-		public long Id { get; set; }
+	[JsonPropertyName("category_id")]
+	public long Id { get; set; }
 
-		[JsonProperty("name")]
-		public string Name { get; set; }
+	[JsonPropertyName("name")]
+	public string Name { get; set; }
 
-		[JsonProperty("parent_category")]
-		[JsonConverter(typeof(NullableLongConverter))]
-		public long? ParentCategoryId { get; set; }
-	}
+	[JsonPropertyName("parent_category")]
+	[JsonConverter(typeof(NullableLongConverter))]
+	public long? ParentCategoryId { get; set; }
 }

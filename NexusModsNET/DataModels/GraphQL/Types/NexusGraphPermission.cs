@@ -1,13 +1,10 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphPermission
 {
-	public class NexusGraphPermission
-	{
-		[JsonProperty("global")]
-		public bool Global { get; set; }
+	[JsonPropertyName("global")]
+	public bool Global { get; set; }
 
-		[JsonProperty("key")]
-		public string Key { get; set; }
-	}
+	[JsonPropertyName("key")]
+	public string Key { get; set; }
 }

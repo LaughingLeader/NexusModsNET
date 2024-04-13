@@ -1,27 +1,22 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-using System;
-
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphCollectionChangelog
 {
-	public class NexusGraphCollectionChangelog
-	{
-		[JsonProperty("collectionRevisionId")]
-		public int CollectionRevisionId { get; set; }
+	[JsonPropertyName("collectionRevisionId")]
+	public int CollectionRevisionId { get; set; }
 
-		[JsonProperty("createdAt")]
-		public DateTimeOffset CreatedAt { get; set; }
+	[JsonPropertyName("createdAt")]
+	public DateTimeOffset CreatedAt { get; set; }
 
-		[JsonProperty("description")]
-		public string Description { get; set; }
+	[JsonPropertyName("description")]
+	public string Description { get; set; }
 
-		[JsonProperty("id")]
-		public int Id { get; set; }
+	[JsonPropertyName("id")]
+	public int Id { get; set; }
 
-		[JsonProperty("revisionNumber")]
-		public int RevisionNumber { get; set; }
+	[JsonPropertyName("revisionNumber")]
+	public int RevisionNumber { get; set; }
 
-		[JsonProperty("updatedAt")]
-		public DateTimeOffset UpdatedAt { get; set; }
-	}
+	[JsonPropertyName("updatedAt")]
+	public DateTimeOffset UpdatedAt { get; set; }
 }

@@ -1,13 +1,10 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphPresignedUrl
 {
-	public class NexusGraphPresignedUrl
-	{
-		[JsonProperty("url")]
-		public string Url { get; set; }
+	[JsonPropertyName("url")]
+	public string Url { get; set; }
 
-		[JsonProperty("uuid")]
-		public string Uuid { get; set; }
-	}
+	[JsonPropertyName("uuid")]
+	public string Uuid { get; set; }
 }

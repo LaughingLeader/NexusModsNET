@@ -1,13 +1,10 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphModifyImageForCollectionMutationPayload
 {
-	public class NexusGraphModifyImageForCollectionMutationPayload
-	{
-		[JsonProperty("image")]
-		public NexusGraphCollectionImage Image { get; set; }
+	[JsonPropertyName("image")]
+	public NexusGraphCollectionImage Image { get; set; }
 
-		[JsonProperty("updated")]
-		public bool Updated { get; set; }
-	}
+	[JsonPropertyName("updated")]
+	public bool Updated { get; set; }
 }

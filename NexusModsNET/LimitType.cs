@@ -1,19 +1,18 @@
 ﻿using NexusModsNET.Exceptions;
 
-namespace NexusModsNET
+namespace NexusModsNET;
+
+/// <summary>
+/// Represents the type of the limit that caused the <see cref="LimitsExceededException"/>
+/// </summary>
+public enum LimitType
 {
 	/// <summary>
-	/// Represents the type of the limit that caused the <see cref="LimitsExceededException"/>
+	/// The official API Limits
 	/// </summary>
-	public enum LimitType
-	{
-		/// <summary>
-		/// The official API Limits
-		/// </summary>
-		API,
-		/// <summary>
-		/// The custom Limits set using the <see cref="RateLimitsManagement"/>
-		/// </summary>
-		Custom
-	}
+	API,
+	/// <summary>
+	/// The custom Limits set using the <see cref="RateLimitsManagement"/>
+	/// </summary>
+	Custom
 }

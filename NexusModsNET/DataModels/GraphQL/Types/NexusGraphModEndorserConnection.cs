@@ -1,16 +1,13 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphModEndorserConnection
 {
-	public class NexusGraphModEndorserConnection
-	{
-		[JsonProperty("edges")]
-		public NexusGraphModEndorserEdge[] Edges { get; set; }
+	[JsonPropertyName("edges")]
+	public NexusGraphModEndorserEdge[] Edges { get; set; }
 
-		[JsonProperty("nodes")]
-		public NexusGraphUser[] Nodes { get; set; }
+	[JsonPropertyName("nodes")]
+	public NexusGraphUser[] Nodes { get; set; }
 
-		[JsonProperty("pageInfo")]
-		public NexusGraphPageInfo PageInfo { get; set; }
-	}
+	[JsonPropertyName("pageInfo")]
+	public NexusGraphPageInfo PageInfo { get; set; }
 }

@@ -1,99 +1,94 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-using System;
-
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphCollectionRevision
 {
-	public class NexusGraphCollectionRevision
-	{
-		[JsonProperty("adultContent")]
-		public bool AdultContent { get; set; }
+	[JsonPropertyName("adultContent")]
+	public bool AdultContent { get; set; }
 
-		[JsonProperty("assetsSizeBytes")]
-		public long AssetsSizeBytes { get; set; }
+	[JsonPropertyName("assetsSizeBytes")]
+	public long AssetsSizeBytes { get; set; }
 
-		[JsonProperty("collection")]
-		public NexusGraphCollection Collection { get; set; }
+	[JsonPropertyName("collection")]
+	public NexusGraphCollection Collection { get; set; }
 
-		[JsonProperty("collectionChangelog")]
-		public NexusGraphCollectionChangelog? CollectionChangelog { get; set; }
+	[JsonPropertyName("collectionChangelog")]
+	public NexusGraphCollectionChangelog? CollectionChangelog { get; set; }
 
-		[JsonProperty("collectionId")]
-		public int CollectionId { get; set; }
+	[JsonPropertyName("collectionId")]
+	public int CollectionId { get; set; }
 
-		[JsonProperty("collectionSchema")]
-		public NexusGraphCollectionSchema CollectionSchema { get; set; }
+	[JsonPropertyName("collectionSchema")]
+	public NexusGraphCollectionSchema CollectionSchema { get; set; }
 
-		[JsonProperty("collectionSchemaId")]
-		public int CollectionSchemaId { get; set; }
+	[JsonPropertyName("collectionSchemaId")]
+	public int CollectionSchemaId { get; set; }
 
-		[JsonProperty("contentPreviewLink")]
-		public string ContentPreviewLink { get; set; }
+	[JsonPropertyName("contentPreviewLink")]
+	public string ContentPreviewLink { get; set; }
 
-		[JsonProperty("createdAt")]
-		public DateTimeOffset CreatedAt { get; set; }
+	[JsonPropertyName("createdAt")]
+	public DateTimeOffset CreatedAt { get; set; }
 
-		[JsonProperty("discardedAt")]
-		public DateTimeOffset DiscardedAt { get; set; }
+	[JsonPropertyName("discardedAt")]
+	public DateTimeOffset DiscardedAt { get; set; }
 
-		[JsonProperty("downloadLink")]
-		public string DownloadLink { get; set; }
+	[JsonPropertyName("downloadLink")]
+	public string DownloadLink { get; set; }
 
-		[JsonProperty("externalResources")]
-		public NexusGraphExternalResource[] ExternalResources { get; set; }
+	[JsonPropertyName("externalResources")]
+	public NexusGraphExternalResource[] ExternalResources { get; set; }
 
-		[JsonProperty("gameVersions")]
-		public NexusGraphGameVersion[] GameVersions { get; set; }
+	[JsonPropertyName("gameVersions")]
+	public NexusGraphGameVersion[] GameVersions { get; set; }
 
-		[JsonProperty("id")]
-		public int Id { get; set; }
+	[JsonPropertyName("id")]
+	public int Id { get; set; }
 
-		[JsonProperty("installationInfo")]
-		public string InstallationInfo { get; set; }
+	[JsonPropertyName("installationInfo")]
+	public string InstallationInfo { get; set; }
 
-		[JsonProperty("latest")]
-		public bool Latest { get; set; }
+	[JsonPropertyName("latest")]
+	public bool Latest { get; set; }
 
-		[JsonProperty("metadata")]
-		public NexusGraphCollectionRevisionMetadata? Metadata { get; set; }
+	[JsonPropertyName("metadata")]
+	public NexusGraphCollectionRevisionMetadata? Metadata { get; set; }
 
-		[JsonProperty("modAuthors")]
-		public NexusGraphUserConnection ModAuthors { get; set; }
+	[JsonPropertyName("modAuthors")]
+	public NexusGraphUserConnection ModAuthors { get; set; }
 
-		[JsonProperty("modCount")]
-		public int ModCount { get; set; }
+	[JsonPropertyName("modCount")]
+	public int ModCount { get; set; }
 
-		[JsonProperty("modFiles")]
-		public NexusGraphCollectionRevisionMod[] ModFiles { get; set; }
+	[JsonPropertyName("modFiles")]
+	public NexusGraphCollectionRevisionMod[] ModFiles { get; set; }
 
-		[JsonProperty("overallRating")]
-		public string OverallRating { get; set; }
+	[JsonPropertyName("overallRating")]
+	public string OverallRating { get; set; }
 
-		[JsonProperty("overallRatingCount")]
-		public int OverallRatingCount { get; set; }
+	[JsonPropertyName("overallRatingCount")]
+	public int OverallRatingCount { get; set; }
 
-		[JsonProperty("retractionReason")]
-		public NexusGraphRetractionReason? RetractionReason { get; set; }
+	[JsonPropertyName("retractionReason")]
+	public NexusGraphRetractionReason? RetractionReason { get; set; }
 
-		[JsonProperty("revisionNumber")]
-		public int RevisionNumber { get; set; }
+	[JsonPropertyName("revisionNumber")]
+	public int RevisionNumber { get; set; }
 
-		[JsonProperty("revisionStatus")]
-		public string RevisionStatus { get; set; }
+	[JsonPropertyName("revisionStatus")]
+	public string RevisionStatus { get; set; }
 
-		[JsonProperty("status")]
-		public string Status { get; set; }
+	[JsonPropertyName("status")]
+	public string Status { get; set; }
 
-		[JsonProperty("totalDownloads")]
-		public int TotalDownloads { get; set; }
+	[JsonPropertyName("totalDownloads")]
+	public int TotalDownloads { get; set; }
 
-		[JsonProperty("totalSize")]
-		public long TotalSize { get; set; }
+	[JsonPropertyName("totalSize")]
+	public long TotalSize { get; set; }
 
-		[JsonProperty("uniqueDownloads")]
-		public int UniqueDownloads { get; set; }
+	[JsonPropertyName("uniqueDownloads")]
+	public int UniqueDownloads { get; set; }
 
-		[JsonProperty("updatedAt")]
-		public DateTimeOffset UpdatedAt { get; set; }
-	}
+	[JsonPropertyName("updatedAt")]
+	public DateTimeOffset UpdatedAt { get; set; }
 }

@@ -1,33 +1,28 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-using System;
-
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphCommentReport
 {
-	public class NexusGraphCommentReport
-	{
-		[JsonProperty("comment")]
-		public NexusGraphComment Comment { get; set; }
+	[JsonPropertyName("comment")]
+	public NexusGraphComment Comment { get; set; }
 
-		[JsonProperty("createdAt")]
-		public DateTimeOffset CreatedAt { get; set; }
+	[JsonPropertyName("createdAt")]
+	public DateTimeOffset CreatedAt { get; set; }
 
-		[JsonProperty("description")]
-		public string Description { get; set; }
+	[JsonPropertyName("description")]
+	public string Description { get; set; }
 
-		[JsonProperty("id")]
-		public string Id { get; set; }
+	[JsonPropertyName("id")]
+	public string Id { get; set; }
 
-		[JsonProperty("reason")]
-		public string Reason { get; set; }
+	[JsonPropertyName("reason")]
+	public string Reason { get; set; }
 
-		[JsonProperty("reporter")]
-		public NexusGraphUser Reporter { get; set; }
+	[JsonPropertyName("reporter")]
+	public NexusGraphUser Reporter { get; set; }
 
-		[JsonProperty("status")]
-		public NexusGraphCommentReportStatus Status { get; set; }
+	[JsonPropertyName("status")]
+	public NexusGraphCommentReportStatus Status { get; set; }
 
-		[JsonProperty("updatedAt")]
-		public DateTimeOffset UpdatedAt { get; set; }
-	}
+	[JsonPropertyName("updatedAt")]
+	public DateTimeOffset UpdatedAt { get; set; }
 }

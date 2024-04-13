@@ -1,43 +1,40 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphUserMonthlyReportEntry
 {
-	public class NexusGraphUserMonthlyReportEntry
-	{
-		[JsonProperty("game")]
-		public NexusGraphGame? Game { get; set; }
+	[JsonPropertyName("game")]
+	public NexusGraphGame? Game { get; set; }
 
-		[JsonProperty("gameId")]
-		public int GameId { get; set; }
+	[JsonPropertyName("gameId")]
+	public int GameId { get; set; }
 
-		[JsonProperty("mod")]
-		public NexusGraphMod? Mod { get; set; }
+	[JsonPropertyName("mod")]
+	public NexusGraphMod? Mod { get; set; }
 
-		[JsonProperty("modCount")]
-		public int ModCount { get; set; }
+	[JsonPropertyName("modCount")]
+	public int ModCount { get; set; }
 
-		[JsonProperty("modId")]
-		public int ModId { get; set; }
+	[JsonPropertyName("modId")]
+	public int ModId { get; set; }
 
-		[JsonProperty("modValue")]
-		public int ModValue { get; set; }
+	[JsonPropertyName("modValue")]
+	public int ModValue { get; set; }
 
-		[JsonProperty("month")]
-		public int Month { get; set; }
+	[JsonPropertyName("month")]
+	public int Month { get; set; }
 
-		[JsonProperty("ratio")]
-		public float Ratio { get; set; }
+	[JsonPropertyName("ratio")]
+	public float Ratio { get; set; }
 
-		[JsonProperty("reportId")]
-		public int ReportId { get; set; }
+	[JsonPropertyName("reportId")]
+	public int ReportId { get; set; }
 
-		[JsonProperty("status")]
-		public int Status { get; set; }
+	[JsonPropertyName("status")]
+	public int Status { get; set; }
 
-		[JsonProperty("value")]
-		public int Value { get; set; }
+	[JsonPropertyName("value")]
+	public int Value { get; set; }
 
-		[JsonProperty("year")]
-		public int Year { get; set; }
-	}
+	[JsonPropertyName("year")]
+	public int Year { get; set; }
 }

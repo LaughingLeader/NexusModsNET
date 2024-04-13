@@ -1,73 +1,70 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphModFile : INexusGraphNode
 {
-	public class NexusGraphModFile : INexusGraphNode
-	{
-		[JsonProperty("categoryId")]
-		public int CategoryId { get; set; }
+	[JsonPropertyName("categoryId")]
+	public int CategoryId { get; set; }
 
-		[JsonProperty("count")]
-		public int Count { get; set; }
+	[JsonPropertyName("count")]
+	public int Count { get; set; }
 
-		[JsonProperty("date")]
-		public int Date { get; set; }
+	[JsonPropertyName("date")]
+	public int Date { get; set; }
 
-		[JsonProperty("description")]
-		public string Description { get; set; }
+	[JsonPropertyName("description")]
+	public string Description { get; set; }
 
-		[JsonProperty("fileId")]
-		public int FileId { get; set; }
+	[JsonPropertyName("fileId")]
+	public int FileId { get; set; }
 
-		[JsonProperty("game")]
-		public NexusGraphGame Game { get; set; }
+	[JsonPropertyName("game")]
+	public NexusGraphGame Game { get; set; }
 
-		[JsonProperty("id")]
-		public string Id { get; set; }
+	[JsonPropertyName("id")]
+	public string Id { get; set; }
 
-		[JsonProperty("manager")]
-		public int Manager { get; set; }
+	[JsonPropertyName("manager")]
+	public int Manager { get; set; }
 
-		[JsonProperty("mod")]
-		public NexusGraphMod Mod { get; set; }
+	[JsonPropertyName("mod")]
+	public NexusGraphMod Mod { get; set; }
 
-		[JsonProperty("modId")]
-		public int ModId { get; set; }
+	[JsonPropertyName("modId")]
+	public int ModId { get; set; }
 
-		[JsonProperty("name")]
-		public string Name { get; set; }
+	[JsonPropertyName("name")]
+	public string Name { get; set; }
 
-		[JsonProperty("owner")]
-		public NexusGraphUser Owner { get; set; }
+	[JsonPropertyName("owner")]
+	public NexusGraphUser Owner { get; set; }
 
-		[JsonProperty("primary")]
-		public int Primary { get; set; }
+	[JsonPropertyName("primary")]
+	public int Primary { get; set; }
 
-		[JsonProperty("reportLink")]
-		public string ReportLink { get; set; }
+	[JsonPropertyName("reportLink")]
+	public string ReportLink { get; set; }
 
-		[JsonProperty("requirementsAlert")]
-		public int RequirementsAlert { get; set; }
+	[JsonPropertyName("requirementsAlert")]
+	public int RequirementsAlert { get; set; }
 
-		[JsonProperty("scanned")]
-		public int Scanned { get; set; }
+	[JsonPropertyName("scanned")]
+	public int Scanned { get; set; }
 
-		[JsonProperty("size")]
-		public int Size { get; set; }
+	[JsonPropertyName("size")]
+	public int Size { get; set; }
 
-		[JsonProperty("sizeInBytes")]
-		public long SizeInBytes { get; set; }
+	[JsonPropertyName("sizeInBytes")]
+	public long SizeInBytes { get; set; }
 
-		[JsonProperty("uCount")]
-		public int Ucount { get; set; }
+	[JsonPropertyName("uCount")]
+	public int Ucount { get; set; }
 
-		[JsonProperty("uid")]
-		public string Uid { get; set; }
+	[JsonPropertyName("uid")]
+	public string Uid { get; set; }
 
-		[JsonProperty("uri")]
-		public string Uri { get; set; }
+	[JsonPropertyName("uri")]
+	public string Uri { get; set; }
 
-		[JsonProperty("version")]
-		public string Version { get; set; }
-	}
+	[JsonPropertyName("version")]
+	public string Version { get; set; }
 }

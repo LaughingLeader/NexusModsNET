@@ -1,24 +1,19 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-using System;
-
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphCollectionDiscardReason
 {
-	public class NexusGraphCollectionDiscardReason
-	{
-		[JsonProperty("collectionId")]
-		public int CollectionId { get; set; }
+	[JsonPropertyName("collectionId")]
+	public int CollectionId { get; set; }
 
-		[JsonProperty("createdAt")]
-		public DateTimeOffset CreatedAt { get; set; }
+	[JsonPropertyName("createdAt")]
+	public DateTimeOffset CreatedAt { get; set; }
 
-		[JsonProperty("id")]
-		public int Id { get; set; }
+	[JsonPropertyName("id")]
+	public int Id { get; set; }
 
-		[JsonProperty("reason")]
-		public string Reason { get; set; }
+	[JsonPropertyName("reason")]
+	public string Reason { get; set; }
 
-		[JsonProperty("updatedAt")]
-		public DateTimeOffset UpdatedAt { get; set; }
-	}
+	[JsonPropertyName("updatedAt")]
+	public DateTimeOffset UpdatedAt { get; set; }
 }

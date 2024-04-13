@@ -1,13 +1,10 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphCreateEndorsementMutationPayload
 {
-	public class NexusGraphCreateEndorsementMutationPayload
-	{
-		[JsonProperty("endorsement")]
-		public NexusGraphEndorsement Endorsement { get; set; }
+	[JsonPropertyName("endorsement")]
+	public NexusGraphEndorsement Endorsement { get; set; }
 
-		[JsonProperty("success")]
-		public bool Success { get; set; }
-	}
+	[JsonPropertyName("success")]
+	public bool Success { get; set; }
 }

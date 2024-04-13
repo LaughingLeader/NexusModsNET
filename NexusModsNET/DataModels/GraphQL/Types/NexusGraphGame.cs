@@ -1,54 +1,49 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-using System;
-
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphGame
 {
-	public class NexusGraphGame
-	{
-		[JsonProperty("approvedAt")]
-		public DateTimeOffset ApprovedAt { get; set; }
+	[JsonPropertyName("approvedAt")]
+	public DateTimeOffset ApprovedAt { get; set; }
 
-		[JsonProperty("availableTags")]
-		public NexusGraphTag[] AvailableTags { get; set; }
+	[JsonPropertyName("availableTags")]
+	public NexusGraphTag[] AvailableTags { get; set; }
 
-		[JsonProperty("collectionCount")]
-		public int CollectionCount { get; set; }
+	[JsonPropertyName("collectionCount")]
+	public int CollectionCount { get; set; }
 
-		[JsonProperty("domainName")]
-		public string DomainName { get; set; }
+	[JsonPropertyName("domainName")]
+	public string DomainName { get; set; }
 
-		[JsonProperty("downloadCount")]
-		public int DownloadCount { get; set; }
+	[JsonPropertyName("downloadCount")]
+	public int DownloadCount { get; set; }
 
-		[JsonProperty("id")]
-		public int Id { get; set; }
+	[JsonPropertyName("id")]
+	public int Id { get; set; }
 
-		[JsonProperty("imageCount")]
-		public int ImageCount { get; set; }
+	[JsonPropertyName("imageCount")]
+	public int ImageCount { get; set; }
 
-		[JsonProperty("mediaCount")]
-		public int MediaCount { get; set; }
+	[JsonPropertyName("mediaCount")]
+	public int MediaCount { get; set; }
 
-		[JsonProperty("modCount")]
-		public int ModCount { get; set; }
+	[JsonPropertyName("modCount")]
+	public int ModCount { get; set; }
 
-		[JsonProperty("name")]
-		public string Name { get; set; }
+	[JsonPropertyName("name")]
+	public string Name { get; set; }
 
-		[JsonProperty("specificTags")]
-		public NexusGraphTag[] SpecificTags { get; set; }
+	[JsonPropertyName("specificTags")]
+	public NexusGraphTag[] SpecificTags { get; set; }
 
-		[JsonProperty("supporterImageCount")]
-		public int SupporterImageCount { get; set; }
+	[JsonPropertyName("supporterImageCount")]
+	public int SupporterImageCount { get; set; }
 
-		[JsonProperty("tileImageUrl")]
-		public string TileImageUrl { get; set; }
+	[JsonPropertyName("tileImageUrl")]
+	public string TileImageUrl { get; set; }
 
-		[JsonProperty("uniqueDownloadCount")]
-		public int UniqueDownloadCount { get; set; }
+	[JsonPropertyName("uniqueDownloadCount")]
+	public int UniqueDownloadCount { get; set; }
 
-		[JsonProperty("videoCount")]
-		public int VideoCount { get; set; }
-	}
+	[JsonPropertyName("videoCount")]
+	public int VideoCount { get; set; }
 }

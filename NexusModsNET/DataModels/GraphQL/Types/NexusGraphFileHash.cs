@@ -1,33 +1,28 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-using System;
-
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphFileHash
 {
-	public class NexusGraphFileHash
-	{
-		[JsonProperty("createdAt")]
-		public DateTimeOffset CreatedAt { get; set; }
+	[JsonPropertyName("createdAt")]
+	public DateTimeOffset CreatedAt { get; set; }
 
-		[JsonProperty("fileName")]
-		public string FileName { get; set; }
+	[JsonPropertyName("fileName")]
+	public string FileName { get; set; }
 
-		[JsonProperty("fileSize")]
-		public long FileSize { get; set; }
+	[JsonPropertyName("fileSize")]
+	public long FileSize { get; set; }
 
-		[JsonProperty("fileType")]
-		public string FileType { get; set; }
+	[JsonPropertyName("fileType")]
+	public string FileType { get; set; }
 
-		[JsonProperty("gameId")]
-		public int GameId { get; set; }
+	[JsonPropertyName("gameId")]
+	public int GameId { get; set; }
 
-		[JsonProperty("md5")]
-		public string Md5 { get; set; }
+	[JsonPropertyName("md5")]
+	public string Md5 { get; set; }
 
-		[JsonProperty("modFile")]
-		public NexusGraphModFile? ModFile { get; set; }
+	[JsonPropertyName("modFile")]
+	public NexusGraphModFile? ModFile { get; set; }
 
-		[JsonProperty("modFileId")]
-		public int ModFileId { get; set; }
-	}
+	[JsonPropertyName("modFileId")]
+	public int ModFileId { get; set; }
 }

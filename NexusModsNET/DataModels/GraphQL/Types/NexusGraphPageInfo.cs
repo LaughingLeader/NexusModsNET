@@ -1,19 +1,16 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphPageInfo
 {
-	public class NexusGraphPageInfo
-	{
-		[JsonProperty("endCursor")]
-		public string EndCursor { get; set; }
+	[JsonPropertyName("endCursor")]
+	public string EndCursor { get; set; }
 
-		[JsonProperty("hasNextPage")]
-		public bool HasNextPage { get; set; }
+	[JsonPropertyName("hasNextPage")]
+	public bool HasNextPage { get; set; }
 
-		[JsonProperty("hasPreviousPage")]
-		public bool HasPreviousPage { get; set; }
+	[JsonPropertyName("hasPreviousPage")]
+	public bool HasPreviousPage { get; set; }
 
-		[JsonProperty("startCursor")]
-		public string StartCursor { get; set; }
-	}
+	[JsonPropertyName("startCursor")]
+	public string StartCursor { get; set; }
 }

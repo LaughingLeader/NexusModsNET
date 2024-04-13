@@ -1,10 +1,7 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphLockThreadMutationPayload
 {
-	public class NexusGraphLockThreadMutationPayload
-	{
-		[JsonProperty("commentThread")]
-		public NexusGraphCommentThread CommentThread { get; set; }
-	}
+	[JsonPropertyName("commentThread")]
+	public NexusGraphCommentThread CommentThread { get; set; }
 }

@@ -1,10 +1,7 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphWriteFullPageNotificationToUserMutationPayload
 {
-	public class NexusGraphWriteFullPageNotificationToUserMutationPayload
-	{
-		[JsonProperty("success")]
-		public bool Success { get; set; }
-	}
+	[JsonPropertyName("success")]
+	public bool Success { get; set; }
 }

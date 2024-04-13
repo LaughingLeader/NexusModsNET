@@ -1,10 +1,7 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphReorderPinnedCommentsMutationPayload
 {
-	public class NexusGraphReorderPinnedCommentsMutationPayload
-	{
-		[JsonProperty("comments")]
-		public NexusGraphComment[] Comments { get; set; }
-	}
+	[JsonPropertyName("comments")]
+	public NexusGraphComment[] Comments { get; set; }
 }

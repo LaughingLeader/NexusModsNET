@@ -1,19 +1,16 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphNodesAggregation
 {
-	public class NexusGraphNodesAggregation
-	{
-		[JsonProperty("key")]
-		public string Key { get; set; }
+	[JsonPropertyName("key")]
+	public string Key { get; set; }
 
-		[JsonProperty("name")]
-		public string Name { get; set; }
+	[JsonPropertyName("name")]
+	public string Name { get; set; }
 
-		[JsonProperty("sub")]
-		public NexusGraphNodesAggregation[] Sub { get; set; }
+	[JsonPropertyName("sub")]
+	public NexusGraphNodesAggregation[] Sub { get; set; }
 
-		[JsonProperty("value")]
-		public int Value { get; set; }
-	}
+	[JsonPropertyName("value")]
+	public int Value { get; set; }
 }

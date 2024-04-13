@@ -1,16 +1,10 @@
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+using System.Runtime.Serialization;namespace NexusModsNET.DataModels.GraphQL.Types;
 
-using System.Runtime.Serialization;
-
-namespace NexusModsNET.DataModels.GraphQL.Types
+[JsonConverter(typeof(JsonStringEnumConverter))]
+public enum NexusGraphBugReportModerationStatus
 {
-	[JsonConverter(typeof(StringEnumConverter))]
-	public enum NexusGraphBugReportModerationStatus
-	{
-		[EnumMember(Value = "none")]
-		None,
-		[EnumMember(Value = "hidden")]
-		Hidden,
-	}
+	[EnumMember(Value = "none")]
+	None,
+	[EnumMember(Value = "hidden")]
+	Hidden,
 }

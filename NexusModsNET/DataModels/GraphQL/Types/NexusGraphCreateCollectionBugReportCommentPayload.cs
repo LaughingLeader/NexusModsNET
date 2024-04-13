@@ -1,10 +1,7 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphCreateCollectionBugReportCommentPayload
 {
-	public class NexusGraphCreateCollectionBugReportCommentPayload
-	{
-		[JsonProperty("collectionBugReportComment")]
-		public NexusGraphComment CollectionBugReportComment { get; set; }
-	}
+	[JsonPropertyName("collectionBugReportComment")]
+	public NexusGraphComment CollectionBugReportComment { get; set; }
 }

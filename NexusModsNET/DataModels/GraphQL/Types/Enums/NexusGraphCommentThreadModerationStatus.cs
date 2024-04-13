@@ -1,16 +1,10 @@
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+using System.Runtime.Serialization;namespace NexusModsNET.DataModels.GraphQL.Types;
 
-using System.Runtime.Serialization;
-
-namespace NexusModsNET.DataModels.GraphQL.Types
+[JsonConverter(typeof(JsonStringEnumConverter))]
+public enum NexusGraphCommentThreadModerationStatus
 {
-	[JsonConverter(typeof(StringEnumConverter))]
-	public enum NexusGraphCommentThreadModerationStatus
-	{
-		[EnumMember(Value = "none")]
-		None,
-		[EnumMember(Value = "locked")]
-		Locked,
-	}
+	[EnumMember(Value = "none")]
+	None,
+	[EnumMember(Value = "locked")]
+	Locked,
 }

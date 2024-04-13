@@ -1,13 +1,10 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphChangeCollectionOwnerPayload
 {
-	public class NexusGraphChangeCollectionOwnerPayload
-	{
-		[JsonProperty("collection")]
-		public NexusGraphCollection Collection { get; set; }
+	[JsonPropertyName("collection")]
+	public NexusGraphCollection Collection { get; set; }
 
-		[JsonProperty("success")]
-		public bool Success { get; set; }
-	}
+	[JsonPropertyName("success")]
+	public bool Success { get; set; }
 }

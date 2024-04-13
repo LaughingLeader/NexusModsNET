@@ -1,13 +1,10 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphUpdateRevisionMutationPayload
 {
-	public class NexusGraphUpdateRevisionMutationPayload
-	{
-		[JsonProperty("revisionId")]
-		public int RevisionId { get; set; }
+	[JsonPropertyName("revisionId")]
+	public int RevisionId { get; set; }
 
-		[JsonProperty("success")]
-		public bool Success { get; set; }
-	}
+	[JsonPropertyName("success")]
+	public bool Success { get; set; }
 }

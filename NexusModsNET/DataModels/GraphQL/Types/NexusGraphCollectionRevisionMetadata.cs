@@ -1,15 +1,10 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-using System;
-
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphCollectionRevisionMetadata
 {
-	public class NexusGraphCollectionRevisionMetadata
-	{
-		[JsonProperty("downloadedAt")]
-		public DateTimeOffset DownloadedAt { get; set; }
+	[JsonPropertyName("downloadedAt")]
+	public DateTimeOffset DownloadedAt { get; set; }
 
-		[JsonProperty("ratingValue")]
-		public NexusGraphRatingOptions? RatingValue { get; set; }
-	}
+	[JsonPropertyName("ratingValue")]
+	public NexusGraphRatingOptions? RatingValue { get; set; }
 }

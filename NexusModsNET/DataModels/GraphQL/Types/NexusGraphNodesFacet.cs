@@ -1,16 +1,13 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphNodesFacet
 {
-	public class NexusGraphNodesFacet
-	{
-		[JsonProperty("count")]
-		public int Count { get; set; }
+	[JsonPropertyName("count")]
+	public int Count { get; set; }
 
-		[JsonProperty("facet")]
-		public string Facet { get; set; }
+	[JsonPropertyName("facet")]
+	public string Facet { get; set; }
 
-		[JsonProperty("value")]
-		public string Value { get; set; }
-	}
+	[JsonPropertyName("value")]
+	public string Value { get; set; }
 }

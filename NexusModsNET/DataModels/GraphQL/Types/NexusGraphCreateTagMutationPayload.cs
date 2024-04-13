@@ -1,13 +1,10 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphCreateTagMutationPayload
 {
-	public class NexusGraphCreateTagMutationPayload
-	{
-		[JsonProperty("success")]
-		public bool Success { get; set; }
+	[JsonPropertyName("success")]
+	public bool Success { get; set; }
 
-		[JsonProperty("tag")]
-		public NexusGraphTag? Tag { get; set; }
-	}
+	[JsonPropertyName("tag")]
+	public NexusGraphTag? Tag { get; set; }
 }

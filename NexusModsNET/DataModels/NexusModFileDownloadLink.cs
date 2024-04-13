@@ -1,18 +1,13 @@
-﻿using Newtonsoft.Json;
+﻿namespace NexusModsNET.DataModels;
 
-using System;
-
-namespace NexusModsNET.DataModels
+public class NexusModFileDownloadLink
 {
-	public class NexusModFileDownloadLink
-	{
-		[JsonProperty("name")]
-		public string Name { get; set; }
+	[JsonPropertyName("name")]
+	public string Name { get; set; }
 
-		[JsonProperty("short_name")]
-		public string ShortName { get; set; }
+	[JsonPropertyName("short_name")]
+	public string ShortName { get; set; }
 
-		[JsonProperty("URI")]
-		public Uri Uri { get; set; }
-	}
+	[JsonPropertyName("URI")]
+	public Uri Uri { get; set; }
 }

@@ -1,13 +1,10 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public interface INexusGraphGloballyIdentifiable
 {
-	public interface INexusGraphGloballyIdentifiable
-	{
-		[JsonProperty("globalId")]
-		public string GlobalId { get; set; }
+	[JsonPropertyName("globalId")]
+	public string GlobalId { get; set; }
 
-		[JsonProperty("id")]
-		public string Id { get; set; }
-	}
+	[JsonPropertyName("id")]
+	public string Id { get; set; }
 }

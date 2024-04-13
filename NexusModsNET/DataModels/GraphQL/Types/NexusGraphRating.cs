@@ -1,22 +1,19 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphRating : INexusGraphNode
 {
-	public class NexusGraphRating : INexusGraphNode
-	{
-		[JsonProperty("id")]
-		public string Id { get; set; }
+	[JsonPropertyName("id")]
+	public string Id { get; set; }
 
-		[JsonProperty("modelId")]
-		public int ModelId { get; set; }
+	[JsonPropertyName("modelId")]
+	public int ModelId { get; set; }
 
-		[JsonProperty("modelType")]
-		public string ModelType { get; set; }
+	[JsonPropertyName("modelType")]
+	public string ModelType { get; set; }
 
-		[JsonProperty("rating")]
-		public string Rating { get; set; }
+	[JsonPropertyName("rating")]
+	public string Rating { get; set; }
 
-		[JsonProperty("userId")]
-		public int UserId { get; set; }
-	}
+	[JsonPropertyName("userId")]
+	public int UserId { get; set; }
 }

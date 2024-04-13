@@ -1,10 +1,7 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphReorderItemPayload
 {
-	public class NexusGraphReorderItemPayload
-	{
-		[JsonProperty("item")]
-		public INexusGraphReorderable? Item { get; set; }
-	}
+	[JsonPropertyName("item")]
+	public INexusGraphReorderable? Item { get; set; }
 }

@@ -1,16 +1,13 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphAverageRating
 {
-	public class NexusGraphAverageRating
-	{
-		[JsonProperty("average")]
-		public float Average { get; set; }
+	[JsonPropertyName("average")]
+	public float Average { get; set; }
 
-		[JsonProperty("positive")]
-		public int Positive { get; set; }
+	[JsonPropertyName("positive")]
+	public int Positive { get; set; }
 
-		[JsonProperty("total")]
-		public int Total { get; set; }
-	}
+	[JsonPropertyName("total")]
+	public int Total { get; set; }
 }

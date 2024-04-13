@@ -1,10 +1,7 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphDiscardCommentMutationPayload
 {
-	public class NexusGraphDiscardCommentMutationPayload
-	{
-		[JsonProperty("comment")]
-		public NexusGraphComment Comment { get; set; }
-	}
+	[JsonPropertyName("comment")]
+	public NexusGraphComment Comment { get; set; }
 }

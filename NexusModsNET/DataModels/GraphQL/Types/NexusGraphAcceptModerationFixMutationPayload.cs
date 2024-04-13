@@ -1,13 +1,10 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphAcceptModerationFixMutationPayload
 {
-	public class NexusGraphAcceptModerationFixMutationPayload
-	{
-		[JsonProperty("moderationFix")]
-		public NexusGraphModerationFix ModerationFix { get; set; }
+	[JsonPropertyName("moderationFix")]
+	public NexusGraphModerationFix ModerationFix { get; set; }
 
-		[JsonProperty("success")]
-		public bool Success { get; set; }
-	}
+	[JsonPropertyName("success")]
+	public bool Success { get; set; }
 }

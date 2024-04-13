@@ -1,13 +1,10 @@
-﻿using Newtonsoft.Json;
+﻿namespace NexusModsNET.DataModels;
 
-namespace NexusModsNET.DataModels
+public class NexusFileHashResult
 {
-	public class NexusFileHashResult
-	{
-		[JsonProperty("mod")]
-		public NexusMod Mod { get; set; }
+	[JsonPropertyName("mod")]
+	public NexusMod Mod { get; set; }
 
-		[JsonProperty("file_details")]
-		public NexusModFile ModFile { get; set; }
-	}
+	[JsonPropertyName("file_details")]
+	public NexusModFile ModFile { get; set; }
 }

@@ -1,10 +1,7 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphAddTileImageToCollectionMutationPayload
 {
-	public class NexusGraphAddTileImageToCollectionMutationPayload
-	{
-		[JsonProperty("image")]
-		public NexusGraphCollectionImage Image { get; set; }
-	}
+	[JsonPropertyName("image")]
+	public NexusGraphCollectionImage Image { get; set; }
 }

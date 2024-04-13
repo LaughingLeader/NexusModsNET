@@ -1,18 +1,12 @@
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+using System.Runtime.Serialization;namespace NexusModsNET.DataModels.GraphQL.Types;
 
-using System.Runtime.Serialization;
-
-namespace NexusModsNET.DataModels.GraphQL.Types
+[JsonConverter(typeof(JsonStringEnumConverter))]
+public enum NexusGraphUpdatePolicy
 {
-	[JsonConverter(typeof(StringEnumConverter))]
-	public enum NexusGraphUpdatePolicy
-	{
-		[EnumMember(Value = "exact")]
-		Exact,
-		[EnumMember(Value = "latest")]
-		Latest,
-		[EnumMember(Value = "prefer")]
-		Prefer,
-	}
+	[EnumMember(Value = "exact")]
+	Exact,
+	[EnumMember(Value = "latest")]
+	Latest,
+	[EnumMember(Value = "prefer")]
+	Prefer,
 }

@@ -1,14 +1,8 @@
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+using System.Runtime.Serialization;namespace NexusModsNET.DataModels.GraphQL.Types;
 
-using System.Runtime.Serialization;
-
-namespace NexusModsNET.DataModels.GraphQL.Types
+[JsonConverter(typeof(JsonStringEnumConverter))]
+public enum NexusGraphModeratable
 {
-	[JsonConverter(typeof(StringEnumConverter))]
-	public enum NexusGraphModeratable
-	{
-		[EnumMember(Value = "Collection")]
-		Collection,
-	}
+	[EnumMember(Value = "Collection")]
+	Collection,
 }

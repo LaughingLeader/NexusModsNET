@@ -1,154 +1,151 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphMutation
 {
-	public class NexusGraphMutation
-	{
-		[JsonProperty("acceptModerationFix")]
-		public NexusGraphAcceptModerationFixMutationPayload? AcceptModerationFix { get; set; }
+	[JsonPropertyName("acceptModerationFix")]
+	public NexusGraphAcceptModerationFixMutationPayload? AcceptModerationFix { get; set; }
 
-		[JsonProperty("changeCollectionOwner")]
-		public NexusGraphChangeCollectionOwnerPayload? ChangeCollectionOwner { get; set; }
+	[JsonPropertyName("changeCollectionOwner")]
+	public NexusGraphChangeCollectionOwnerPayload? ChangeCollectionOwner { get; set; }
 
-		[JsonProperty("clearCommentModerationStatus")]
-		public NexusGraphClearCommentModerationStatusMutationPayload? ClearCommentModerationStatus { get; set; }
+	[JsonPropertyName("clearCommentModerationStatus")]
+	public NexusGraphClearCommentModerationStatusMutationPayload? ClearCommentModerationStatus { get; set; }
 
-		[JsonProperty("clearCommentThreadModerationStatus")]
-		public NexusGraphClearThreadModerationStatusMutationPayload? ClearCommentThreadModerationStatus { get; set; }
+	[JsonPropertyName("clearCommentThreadModerationStatus")]
+	public NexusGraphClearThreadModerationStatusMutationPayload? ClearCommentThreadModerationStatus { get; set; }
 
-		[JsonProperty("closeCollectionBugReport")]
-		public NexusGraphCloseCollectionBugReportMutationPayload? CloseCollectionBugReport { get; set; }
+	[JsonPropertyName("closeCollectionBugReport")]
+	public NexusGraphCloseCollectionBugReportMutationPayload? CloseCollectionBugReport { get; set; }
 
-		[JsonProperty("createChangelog")]
-		public NexusGraphCreateChangelogMutationPayload? CreateChangelog { get; set; }
+	[JsonPropertyName("createChangelog")]
+	public NexusGraphCreateChangelogMutationPayload? CreateChangelog { get; set; }
 
-		[JsonProperty("createCollection")]
-		public NexusGraphCreateCollectionMutationPayload? CreateCollection { get; set; }
+	[JsonPropertyName("createCollection")]
+	public NexusGraphCreateCollectionMutationPayload? CreateCollection { get; set; }
 
-		[JsonProperty("createComment")]
-		public NexusGraphCreateCommentMutationPayload? CreateComment { get; set; }
+	[JsonPropertyName("createComment")]
+	public NexusGraphCreateCommentMutationPayload? CreateComment { get; set; }
 
-		[JsonProperty("createMessage")]
-		public NexusGraphCreateMessagePayload? CreateMessage { get; set; }
+	[JsonPropertyName("createMessage")]
+	public NexusGraphCreateMessagePayload? CreateMessage { get; set; }
 
-		[JsonProperty("createNoteAboutUser")]
-		public NexusGraphCreateNoteAboutUserMutationPayload? CreateNoteAboutUser { get; set; }
+	[JsonPropertyName("createNoteAboutUser")]
+	public NexusGraphCreateNoteAboutUserMutationPayload? CreateNoteAboutUser { get; set; }
 
-		[JsonProperty("createOrUpdateRevision")]
-		public NexusGraphCreateOrUpdateRevisionMutationPayload? CreateOrUpdateRevision { get; set; }
+	[JsonPropertyName("createOrUpdateRevision")]
+	public NexusGraphCreateOrUpdateRevisionMutationPayload? CreateOrUpdateRevision { get; set; }
 
-		[JsonProperty("createTag")]
-		public NexusGraphCreateTagMutationPayload? CreateTag { get; set; }
+	[JsonPropertyName("createTag")]
+	public NexusGraphCreateTagMutationPayload? CreateTag { get; set; }
 
-		[JsonProperty("discardCollection")]
-		public NexusGraphDiscardCollectionMutationPayload? DiscardCollection { get; set; }
+	[JsonPropertyName("discardCollection")]
+	public NexusGraphDiscardCollectionMutationPayload? DiscardCollection { get; set; }
 
-		[JsonProperty("discardComment")]
-		public NexusGraphDiscardCommentMutationPayload? DiscardComment { get; set; }
+	[JsonPropertyName("discardComment")]
+	public NexusGraphDiscardCommentMutationPayload? DiscardComment { get; set; }
 
-		[JsonProperty("discardRevision")]
-		public NexusGraphDiscardRevisionMutationPayload? DiscardRevision { get; set; }
+	[JsonPropertyName("discardRevision")]
+	public NexusGraphDiscardRevisionMutationPayload? DiscardRevision { get; set; }
 
-		[JsonProperty("discardTag")]
-		public NexusGraphDiscardTagMutationPayload? DiscardTag { get; set; }
+	[JsonPropertyName("discardTag")]
+	public NexusGraphDiscardTagMutationPayload? DiscardTag { get; set; }
 
-		[JsonProperty("editCollection")]
-		public NexusGraphEditCollectionMutationPayload? EditCollection { get; set; }
+	[JsonPropertyName("editCollection")]
+	public NexusGraphEditCollectionMutationPayload? EditCollection { get; set; }
 
-		[JsonProperty("giveKudos")]
-		public NexusGraphGiveKudosMutationPayload? GiveKudos { get; set; }
+	[JsonPropertyName("giveKudos")]
+	public NexusGraphGiveKudosMutationPayload? GiveKudos { get; set; }
 
-		[JsonProperty("hideComment")]
-		public NexusGraphHideCommentMutationPayload? HideComment { get; set; }
+	[JsonPropertyName("hideComment")]
+	public NexusGraphHideCommentMutationPayload? HideComment { get; set; }
 
-		[JsonProperty("issueWarningToUser")]
-		public NexusGraphIssueWarningToUserMutationPayload? IssueWarningToUser { get; set; }
+	[JsonPropertyName("issueWarningToUser")]
+	public NexusGraphIssueWarningToUserMutationPayload? IssueWarningToUser { get; set; }
 
-		[JsonProperty("likeComment")]
-		public NexusGraphLikeCommentMutationPayload? LikeComment { get; set; }
+	[JsonPropertyName("likeComment")]
+	public NexusGraphLikeCommentMutationPayload? LikeComment { get; set; }
 
-		[JsonProperty("listCollection")]
-		public NexusGraphListCollectionMutationPayload? ListCollection { get; set; }
+	[JsonPropertyName("listCollection")]
+	public NexusGraphListCollectionMutationPayload? ListCollection { get; set; }
 
-		[JsonProperty("lockComment")]
-		public NexusGraphLockCommentMutationPayload? LockComment { get; set; }
+	[JsonPropertyName("lockComment")]
+	public NexusGraphLockCommentMutationPayload? LockComment { get; set; }
 
-		[JsonProperty("lockCommentThread")]
-		public NexusGraphLockThreadMutationPayload? LockCommentThread { get; set; }
+	[JsonPropertyName("lockCommentThread")]
+	public NexusGraphLockThreadMutationPayload? LockCommentThread { get; set; }
 
-		[JsonProperty("pinComment")]
-		public NexusGraphPinCommentMutationPayload? PinComment { get; set; }
+	[JsonPropertyName("pinComment")]
+	public NexusGraphPinCommentMutationPayload? PinComment { get; set; }
 
-		[JsonProperty("publishRevision")]
-		public NexusGraphPublishRevisionMutationPayload? PublishRevision { get; set; }
+	[JsonPropertyName("publishRevision")]
+	public NexusGraphPublishRevisionMutationPayload? PublishRevision { get; set; }
 
-		[JsonProperty("rejectModerationFix")]
-		public NexusGraphRejectModerationFixMutationPayload? RejectModerationFix { get; set; }
+	[JsonPropertyName("rejectModerationFix")]
+	public NexusGraphRejectModerationFixMutationPayload? RejectModerationFix { get; set; }
 
-		[JsonProperty("removeCommentLike")]
-		public NexusGraphRemoveCommentLikeMutationPayload? RemoveCommentLike { get; set; }
+	[JsonPropertyName("removeCommentLike")]
+	public NexusGraphRemoveCommentLikeMutationPayload? RemoveCommentLike { get; set; }
 
-		[JsonProperty("removeKudos")]
-		public NexusGraphRemoveKudosMutationPayload? RemoveKudos { get; set; }
+	[JsonPropertyName("removeKudos")]
+	public NexusGraphRemoveKudosMutationPayload? RemoveKudos { get; set; }
 
-		[JsonProperty("reorderItem")]
-		public NexusGraphReorderItemPayload? ReorderItem { get; set; }
+	[JsonPropertyName("reorderItem")]
+	public NexusGraphReorderItemPayload? ReorderItem { get; set; }
 
-		[JsonProperty("reorderPinnedComments")]
-		public NexusGraphReorderPinnedCommentsMutationPayload? ReorderPinnedComments { get; set; }
+	[JsonPropertyName("reorderPinnedComments")]
+	public NexusGraphReorderPinnedCommentsMutationPayload? ReorderPinnedComments { get; set; }
 
-		[JsonProperty("reportCollection")]
-		public NexusGraphReportCollectionMutationPayload? ReportCollection { get; set; }
+	[JsonPropertyName("reportCollection")]
+	public NexusGraphReportCollectionMutationPayload? ReportCollection { get; set; }
 
-		[JsonProperty("reportCollectionBugReport")]
-		public NexusGraphReportCollectionBugReportMutationPayload? ReportCollectionBugReport { get; set; }
+	[JsonPropertyName("reportCollectionBugReport")]
+	public NexusGraphReportCollectionBugReportMutationPayload? ReportCollectionBugReport { get; set; }
 
-		[JsonProperty("reportComment")]
-		public NexusGraphReportCommentMutationPayload? ReportComment { get; set; }
+	[JsonPropertyName("reportComment")]
+	public NexusGraphReportCommentMutationPayload? ReportComment { get; set; }
 
-		[JsonProperty("restoreComment")]
-		public NexusGraphRestoreCommentMutationPayload? RestoreComment { get; set; }
+	[JsonPropertyName("restoreComment")]
+	public NexusGraphRestoreCommentMutationPayload? RestoreComment { get; set; }
 
-		[JsonProperty("retractRevision")]
-		public NexusGraphRetractRevisionMutationPayload? RetractRevision { get; set; }
+	[JsonPropertyName("retractRevision")]
+	public NexusGraphRetractRevisionMutationPayload? RetractRevision { get; set; }
 
-		[JsonProperty("submitModerationFix")]
-		public NexusGraphSubmitModerationFixMutationPayload? SubmitModerationFix { get; set; }
+	[JsonPropertyName("submitModerationFix")]
+	public NexusGraphSubmitModerationFixMutationPayload? SubmitModerationFix { get; set; }
 
-		[JsonProperty("trackUser")]
-		public NexusGraphTrackUserMutationPayload? TrackUser { get; set; }
+	[JsonPropertyName("trackUser")]
+	public NexusGraphTrackUserMutationPayload? TrackUser { get; set; }
 
-		[JsonProperty("unlistCollection")]
-		public NexusGraphUnlistCollectionMutationPayload? UnlistCollection { get; set; }
+	[JsonPropertyName("unlistCollection")]
+	public NexusGraphUnlistCollectionMutationPayload? UnlistCollection { get; set; }
 
-		[JsonProperty("unpinComment")]
-		public NexusGraphUnpinCommentMutationPayload? UnpinComment { get; set; }
+	[JsonPropertyName("unpinComment")]
+	public NexusGraphUnpinCommentMutationPayload? UnpinComment { get; set; }
 
-		[JsonProperty("untrackUser")]
-		public NexusGraphUntrackUserMutationPayload? UntrackUser { get; set; }
+	[JsonPropertyName("untrackUser")]
+	public NexusGraphUntrackUserMutationPayload? UntrackUser { get; set; }
 
-		[JsonProperty("updateAboutMe")]
-		public NexusGraphUpdateAboutMeMutationPayload? UpdateAboutMe { get; set; }
+	[JsonPropertyName("updateAboutMe")]
+	public NexusGraphUpdateAboutMeMutationPayload? UpdateAboutMe { get; set; }
 
-		[JsonProperty("updateChangelog")]
-		public NexusGraphUpdateChangelogMutationPayload? UpdateChangelog { get; set; }
+	[JsonPropertyName("updateChangelog")]
+	public NexusGraphUpdateChangelogMutationPayload? UpdateChangelog { get; set; }
 
-		[JsonProperty("updateComment")]
-		public NexusGraphUpdateCommentMutationPayload? UpdateComment { get; set; }
+	[JsonPropertyName("updateComment")]
+	public NexusGraphUpdateCommentMutationPayload? UpdateComment { get; set; }
 
-		[JsonProperty("updateCountry")]
-		public NexusGraphUpdateCountryMutationPayload? UpdateCountry { get; set; }
+	[JsonPropertyName("updateCountry")]
+	public NexusGraphUpdateCountryMutationPayload? UpdateCountry { get; set; }
 
-		[JsonProperty("updateRevision")]
-		public NexusGraphUpdateRevisionMutationPayload? UpdateRevision { get; set; }
+	[JsonPropertyName("updateRevision")]
+	public NexusGraphUpdateRevisionMutationPayload? UpdateRevision { get; set; }
 
-		[JsonProperty("updateTag")]
-		public NexusGraphUpdateTagMutationPayload? UpdateTag { get; set; }
+	[JsonPropertyName("updateTag")]
+	public NexusGraphUpdateTagMutationPayload? UpdateTag { get; set; }
 
-		[JsonProperty("uploadAttachment")]
-		public NexusGraphUploadAttachmentMutationPayload? UploadAttachment { get; set; }
+	[JsonPropertyName("uploadAttachment")]
+	public NexusGraphUploadAttachmentMutationPayload? UploadAttachment { get; set; }
 
-		[JsonProperty("writeFullPageNotificationToUser")]
-		public NexusGraphWriteFullPageNotificationToUserMutationPayload? WriteFullPageNotificationToUser { get; set; }
-	}
+	[JsonPropertyName("writeFullPageNotificationToUser")]
+	public NexusGraphWriteFullPageNotificationToUserMutationPayload? WriteFullPageNotificationToUser { get; set; }
 }

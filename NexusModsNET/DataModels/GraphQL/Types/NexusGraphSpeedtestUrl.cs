@@ -1,19 +1,16 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphSpeedtestUrl
 {
-	public class NexusGraphSpeedtestUrl
-	{
-		[JsonProperty("description")]
-		public string Description { get; set; }
+	[JsonPropertyName("description")]
+	public string Description { get; set; }
 
-		[JsonProperty("location")]
-		public string Location { get; set; }
+	[JsonPropertyName("location")]
+	public string Location { get; set; }
 
-		[JsonProperty("tag")]
-		public string Tag { get; set; }
+	[JsonPropertyName("tag")]
+	public string Tag { get; set; }
 
-		[JsonProperty("title")]
-		public string Title { get; set; }
-	}
+	[JsonPropertyName("title")]
+	public string Title { get; set; }
 }

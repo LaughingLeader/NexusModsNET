@@ -1,22 +1,22 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+﻿namespace NexusModsNET.Internals.Converters;
 
-using System;
-
-namespace NexusModsNET.Internals.Converters
+internal class GameApprovedDateConverter : UnixToNullableDateTimeConverter
 {
-	internal class GameApprovedDateConverter : UnixDateTimeConverter
+	public override DateTime? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 	{
-		public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+		try
 		{
-			if (reader.Value is long date)
+			if (reader.TryGetInt64(out var time))
 			{
-				if (date < 2)
-				{
-					return null;
-				}
+				if (time < 2) return null;
+
+				if (IsFormatInSeconds == true || IsFormatInSeconds == null && time > _unixMinSeconds && time < _unixMaxSeconds)
+					return DateTimeOffset.FromUnixTimeSeconds(time).LocalDateTime;
+				return DateTimeOffset.FromUnixTimeMilliseconds(time).LocalDateTime;
 			}
-			return base.ReadJson(reader, objectType, existingValue, serializer);
 		}
+		catch { }
+
+		return null;
 	}
 }

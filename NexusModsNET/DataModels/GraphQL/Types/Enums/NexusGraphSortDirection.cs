@@ -1,16 +1,10 @@
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+using System.Runtime.Serialization;namespace NexusModsNET.DataModels.GraphQL.Types;
 
-using System.Runtime.Serialization;
-
-namespace NexusModsNET.DataModels.GraphQL.Types
+[JsonConverter(typeof(JsonStringEnumConverter))]
+public enum NexusGraphSortDirection
 {
-	[JsonConverter(typeof(StringEnumConverter))]
-	public enum NexusGraphSortDirection
-	{
-		[EnumMember(Value = "ASC")]
-		Asc,
-		[EnumMember(Value = "DESC")]
-		Desc,
-	}
+	[EnumMember(Value = "ASC")]
+	Asc,
+	[EnumMember(Value = "DESC")]
+	Desc,
 }

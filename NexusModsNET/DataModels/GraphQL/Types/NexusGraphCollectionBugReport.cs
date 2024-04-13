@@ -1,66 +1,61 @@
-using Newtonsoft.Json;
+namespace NexusModsNET.DataModels.GraphQL.Types;
 
-using System;
-
-namespace NexusModsNET.DataModels.GraphQL.Types
+public class NexusGraphCollectionBugReport : INexusGraphAttachable
 {
-	public class NexusGraphCollectionBugReport : INexusGraphAttachable
-	{
-		[JsonProperty("attachments")]
-		public NexusGraphAttachment[] Attachments { get; set; }
+	[JsonPropertyName("attachments")]
+	public NexusGraphAttachment[] Attachments { get; set; }
 
-		[JsonProperty("closedAt")]
-		public DateTimeOffset ClosedAt { get; set; }
+	[JsonPropertyName("closedAt")]
+	public DateTimeOffset ClosedAt { get; set; }
 
-		[JsonProperty("closureReason")]
-		public NexusGraphBugReportClosureReason? ClosureReason { get; set; }
+	[JsonPropertyName("closureReason")]
+	public NexusGraphBugReportClosureReason? ClosureReason { get; set; }
 
-		[JsonProperty("collection")]
-		public NexusGraphCollection Collection { get; set; }
+	[JsonPropertyName("collection")]
+	public NexusGraphCollection Collection { get; set; }
 
-		[JsonProperty("collectionRevisionNumber")]
-		public int CollectionRevisionNumber { get; set; }
+	[JsonPropertyName("collectionRevisionNumber")]
+	public int CollectionRevisionNumber { get; set; }
 
-		[JsonProperty("commentThread")]
-		public NexusGraphCommentThread CommentThread { get; set; }
+	[JsonPropertyName("commentThread")]
+	public NexusGraphCommentThread CommentThread { get; set; }
 
-		[JsonProperty("createdAt")]
-		public DateTimeOffset CreatedAt { get; set; }
+	[JsonPropertyName("createdAt")]
+	public DateTimeOffset CreatedAt { get; set; }
 
-		[JsonProperty("description")]
-		public string Description { get; set; }
+	[JsonPropertyName("description")]
+	public string Description { get; set; }
 
-		[JsonProperty("hiddenBy")]
-		public NexusGraphUser? HiddenBy { get; set; }
+	[JsonPropertyName("hiddenBy")]
+	public NexusGraphUser? HiddenBy { get; set; }
 
-		[JsonProperty("hiddenInternalReason")]
-		public string HiddenInternalReason { get; set; }
+	[JsonPropertyName("hiddenInternalReason")]
+	public string HiddenInternalReason { get; set; }
 
-		[JsonProperty("hiddenReason")]
-		public string HiddenReason { get; set; }
+	[JsonPropertyName("hiddenReason")]
+	public string HiddenReason { get; set; }
 
-		[JsonProperty("id")]
-		public string Id { get; set; }
+	[JsonPropertyName("id")]
+	public string Id { get; set; }
 
-		[JsonProperty("moderationStatus")]
-		public NexusGraphBugReportModerationStatus ModerationStatus { get; set; }
+	[JsonPropertyName("moderationStatus")]
+	public NexusGraphBugReportModerationStatus ModerationStatus { get; set; }
 
-		[JsonProperty("openedAt")]
-		public DateTimeOffset OpenedAt { get; set; }
+	[JsonPropertyName("openedAt")]
+	public DateTimeOffset OpenedAt { get; set; }
 
-		[JsonProperty("permissions")]
-		public NexusGraphPermission[] Permissions { get; set; }
+	[JsonPropertyName("permissions")]
+	public NexusGraphPermission[] Permissions { get; set; }
 
-		[JsonProperty("reporter")]
-		public NexusGraphUser Reporter { get; set; }
+	[JsonPropertyName("reporter")]
+	public NexusGraphUser Reporter { get; set; }
 
-		[JsonProperty("status")]
-		public NexusGraphBugReportStatus Status { get; set; }
+	[JsonPropertyName("status")]
+	public NexusGraphBugReportStatus Status { get; set; }
 
-		[JsonProperty("title")]
-		public string Title { get; set; }
+	[JsonPropertyName("title")]
+	public string Title { get; set; }
 
-		[JsonProperty("updatedAt")]
-		public DateTimeOffset UpdatedAt { get; set; }
-	}
+	[JsonPropertyName("updatedAt")]
+	public DateTimeOffset UpdatedAt { get; set; }
 }

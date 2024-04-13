@@ -1,27 +1,22 @@
-﻿using Newtonsoft.Json;
+﻿namespace NexusModsNET.DataModels;
 
-using System;
-
-namespace NexusModsNET.DataModels
+public class NexusModFileUpdate
 {
-	public class NexusModFileUpdate
-	{
-		[JsonProperty("old_file_id")]
-		public long OldFileId { get; set; }
+	[JsonPropertyName("old_file_id")]
+	public long OldFileId { get; set; }
 
-		[JsonProperty("new_file_id")]
-		public long NewFileId { get; set; }
+	[JsonPropertyName("new_file_id")]
+	public long NewFileId { get; set; }
 
-		[JsonProperty("old_file_name")]
-		public string OldFileName { get; set; }
+	[JsonPropertyName("old_file_name")]
+	public string OldFileName { get; set; }
 
-		[JsonProperty("new_file_name")]
-		public string NewFileName { get; set; }
+	[JsonPropertyName("new_file_name")]
+	public string NewFileName { get; set; }
 
-		[JsonProperty("uploaded_timestamp")]
-		public long UploadedTimestamp { get; set; }
+	[JsonPropertyName("uploaded_timestamp")]
+	public long UploadedTimestamp { get; set; }
 
-		[JsonProperty("uploaded_time")]
-		public DateTimeOffset UploadedTime { get; set; }
-	}
+	[JsonPropertyName("uploaded_time")]
+	public DateTimeOffset UploadedTime { get; set; }
 }

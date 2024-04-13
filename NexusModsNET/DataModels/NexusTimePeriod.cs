@@ -1,9 +1,8 @@
-﻿namespace NexusModsNET.DataModels
+﻿namespace NexusModsNET.DataModels;
+
+public enum NexusTimePeriod
 {
-	public enum NexusTimePeriod
-	{
-		Day,
-		Week,
-		Month
-	}
+	Day,
+	Week,
+	Month
 }
