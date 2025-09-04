@@ -6,10 +6,10 @@ public class NexusModUpdate
 	public long ModId { get; set; }
 
 	[JsonPropertyName("latest_file_update")]
-	[JsonConverter(typeof(UnixToNullableDateTimeConverter))]
+	[JsonConverter(typeof(UnixToNullableDateTimeOffsetConverter))]
 	public DateTimeOffset LatestFileUpdate { get; set; }
 
 	[JsonPropertyName("latest_mod_activity")]
-	[JsonConverter(typeof(UnixToNullableDateTimeConverter))]
+	[JsonConverter(typeof(UnixToNullableDateTimeOffsetConverter))]
 	public DateTimeOffset LatestModActivity { get; set; }
 }

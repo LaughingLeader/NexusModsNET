@@ -28,7 +28,7 @@ public class NexusGame
 
 	[JsonPropertyName("approved_date")]
 	[JsonConverter(typeof(GameApprovedDateConverter))]
-	public DateTimeOffset? ApprovedDate { get; set; }
+	public DateTimeOffset ApprovedDate { get; set; }
 
 	[JsonPropertyName("file_views")]
 	public long FileViews { get; set; }

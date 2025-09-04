@@ -1,14 +1,14 @@
 ﻿namespace NexusModsNET.Internals.Converters;
 
-internal class GameApprovedDateConverter : UnixToNullableDateTimeConverter
+internal class GameApprovedDateConverter : UnixToNullableDateTimeOffsetConverter
 {
-	public override DateTime? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+	public override DateTimeOffset Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 	{
 		try
 		{
 			if (reader.TryGetInt64(out var time))
 			{
-				if (time < 2) return null;
+				if (time < 2) return DateTimeOffset.MinValue;
 
 				if (IsFormatInSeconds == true || IsFormatInSeconds == null && time > _unixMinSeconds && time < _unixMaxSeconds)
 					return DateTimeOffset.FromUnixTimeSeconds(time).LocalDateTime;
@@ -17,6 +17,6 @@ internal class GameApprovedDateConverter : UnixToNullableDateTimeConverter
 		}
 		catch { }
 
-		return null;
+		return DateTimeOffset.MinValue;
 	}
 }

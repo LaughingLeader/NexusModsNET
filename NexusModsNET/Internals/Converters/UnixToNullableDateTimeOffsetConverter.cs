@@ -3,14 +3,18 @@
 /// <summary>
 /// Source: https://stackoverflow.com/a/70225152
 /// </summary>
-internal class UnixToNullableDateTimeConverter : JsonConverter<DateTime?>
+internal class UnixToNullableDateTimeOffsetConverter : JsonConverter<DateTimeOffset>
 {
 	internal static readonly long _unixMinSeconds = DateTimeOffset.MinValue.ToUnixTimeSeconds(); // -62_135_596_800
 	internal static readonly long _unixMaxSeconds = DateTimeOffset.MaxValue.ToUnixTimeSeconds(); // 253_402_300_799
 
+	private static readonly Type t_DateTimeOffset = typeof(DateTimeOffset);
+
+	public override bool CanConvert(Type typeToConvert) => t_DateTimeOffset == typeToConvert;
+
 	public bool? IsFormatInSeconds { get; init; }
 
-	public override DateTime? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+	public override DateTimeOffset Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 	{
 		try
 		{
@@ -28,9 +32,9 @@ internal class UnixToNullableDateTimeConverter : JsonConverter<DateTime?>
 			// despite the method prefix 'Try', TryGetInt64 will throw an exception if the token isn't a number.. hence we swallow it and return null
 		}
 
-		return null;
+		return DateTimeOffset.MinValue;
 	}
 
 	// write is out of scope, but this could be implemented via writer.ToUnixTimeMilliseconds/WriteNullValue
-	public override void Write(Utf8JsonWriter writer, DateTime? value, JsonSerializerOptions options) => throw new NotSupportedException();
+	public override void Write(Utf8JsonWriter writer, DateTimeOffset value, JsonSerializerOptions options) => throw new NotSupportedException();
 }

@@ -9,7 +9,7 @@ public class NexusUserEndorsement
 	public string DomainName { get; set; }
 
 	[JsonPropertyName("date")]
-	[JsonConverter(typeof(UnixToNullableDateTimeConverter))]
+	[JsonConverter(typeof(UnixToNullableDateTimeOffsetConverter))]
 	public DateTimeOffset Date { get; set; }
 
 	[JsonPropertyName("version")]
