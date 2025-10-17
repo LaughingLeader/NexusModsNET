@@ -18,7 +18,7 @@ internal class UnixToNullableDateTimeOffsetConverter : JsonConverter<DateTimeOff
 	{
 		try
 		{
-			if (reader.TryGetInt64(out var time))
+			if (reader.TokenType != JsonTokenType.Null && reader.TryGetInt64(out var time))
 			{
 				// if 'IsFormatInSeconds' is unspecified, then deduce the correct type based on whether it can be represented as seconds within the .net DateTime min/max range (1/1/0001 to 31/12/9999)
 				// - because we're dealing with a 64bit value, the unix time in seconds can exceed the traditional 32bit min/max restrictions (1/1/1970 to 19/1/2038)
