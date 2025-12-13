@@ -12,7 +12,7 @@ internal class UnixToNullableDateTimeOffsetConverter : JsonConverter<DateTimeOff
 
 	public override bool CanConvert(Type typeToConvert) => t_DateTimeOffset == typeToConvert;
 
-	public bool? IsFormatInSeconds { get; init; }
+	public bool? IsFormatInSeconds { get; set; }
 
 	public override DateTimeOffset Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 	{
